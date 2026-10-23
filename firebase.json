@@ -1,0 +1,9 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "backend/**", "*.md", "firestore.rules"],
+    "headers": [{"source": "/firebase-messaging-sw.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}]}]
+  },
+  "firestore": {"rules": "firestore.rules"},
+  "functions": {"source": "backend"}
+}
