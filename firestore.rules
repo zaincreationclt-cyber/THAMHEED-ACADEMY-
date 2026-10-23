@@ -1,0 +1,24 @@
+rules_version='2';
+service cloud.firestore{match /databases/{db}/documents{
+  // Admin = a user whose UID has a document in the "admins" collection (you create it by hand in the console)
+  function isAdmin(){return request.auth!=null&&exists(/databases/$(db)/documents/admins/$(request.auth.uid))}
+
+  // public: notices, timetable, fees, contact numbers
+  match /config/{d}{allow read:if true;allow write:if isAdmin()}
+
+  // private: one document per family, named by the parent code.
+  // A parent can read only the document whose code they know; nobody can list them. Only admin lists/writes.
+  match /families/{code}{
+    allow get:if true;
+    allow list,write:if isAdmin();
+  }
+
+  match /admins/{u}{allow read:if request.auth!=null&&request.auth.uid==u;allow write:if false}
+
+  // push notifications
+  match /devices/{t}{
+    allow create,update:if request.resource.data.keys().hasOnly(["token","classes","lang","updated"]);
+    allow read,delete:if false;
+  }
+  match /notices/{id}{allow read,write:if isAdmin()}   // adding a doc here sends a push (Cloud Function)
+}}
