@@ -3,227 +3,991 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#8fd100">
-<link rel="manifest" href="manifest.json">
-<link rel="icon" href="icon-192.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Thamheed">
-<title>Thamheed Academy</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@400;600;700&family=Amiri:wght@700&display=swap">
+<title>Thamheed Academy – Online Madrasa Tuition</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Noto+Sans+Malayalam:wght@400;600;700&family=Amiri:wght@700&display=swap">
 <style>
-:root{--lime:#8fd100;--lime2:#a8e61f;--ink:#14161a;--bg:#f5f7f0;--card:#fff;--mut:#6b7280;--line:#e7ebdc;--dk:#1f2124;--lt:#4d7c00;--bad:#e5484d;--sh:0 8px 24px rgba(20,22,26,.07);--logo:url(data:image/png;base64,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
-APgBwi3M0KxCu8xxF7/6jwDWzMcDzAewLQinPhKSnJrJD6RLBmAnE/lYB+D/kV8dYgFdv3IkP/80CQKzlaNsjIODzJY1XLUbzUJdA1wc2g+fvw1Gfod1mAeOHJG7WVYoHjI1mBdSI2UV/lYdyguSujSkeFZt2LftZI2bMfa6tX3X52PWur7XiMWtYKsnn+L6TqWe8HwcYr9L1rSNjvQsLqNkQ6Pxvi0gaB5WaXTqQnuxU5MqWioExHbAn7qfdhUBH1Za40nlO9e5ay5xabCXtXOQe3CaJk6lNWOPspDGy71fcd7QUCYwTW2qptKNdINfbWRh9uaj1MwUsxzrnQe9xvmvjRGn/UQKmajE5RrgogAXm5zug+Gdyq8svV7prgObMj5CrnC6kZuNA9wz9hP4ij1jvN+GcCN0O4MN6EPlvtino0kXU8zyyUTt3X63c2Iv5xLedADXZPVnSY3bu7si9SafvNnw7oEZ9bd0vZf/HXUpsljD2U9KeIwKhjcEiA7UTn3LMOUBANlWckRqR2bddsYavn3yI2kPDMXsxq1MTA7wPGbLp5QZxZUDNzkSuTjFOzcap3idJJn1jHN1EodRmEvnvJKQCBmh3AJ9jKOHdIuo45D2vQlQK1c8BsXUAiKuRX3dYJ7bexQEb7OsuDKIVMPZ7VlTfUIJ3nticrZjcr+bncArtbGnLsAAAh8nvZ/Ocw5B7U+8TPM5etFpCm7Yfcu99eC/2qkBEYkLgAX4e+cXBOmA/IuMq8Fq759qZavbvBUCWiQFdBsAf6Nj1CTi3GrqpkJBV3ig4ycX1ILGuCjFKPRj3oq0z2dlxHoyZGPU8RWwluBFtKblrnLelxvcsYaOkeJGWiTFV+mu55nlOrSfo1dlD+4JjwWsFYMZERwcAeLQE1s3btprDP/H756QPx3DfvJgQyt1O5S4XU6ZSzI/fyvnVDoR3iLaAOGDqzV4fMH18iCbEfjNpNhwSIDHFS1zwubc9s6+JG/8Mv4+IyQ+nxJHwYOxMD+9el4pTMNYXUM8+uK2quSsFtTog7BraGep5d6DjohH+qQLuS1w6ELy/vXexGwGVpvG9u7MDLwoA8CJhtiTvZfGx4/jdwkdWnjZV2vFDaf89jvkelgoWTd+9LzLIyKC7y6lAP9vBiYjepQ55s2mES+z+zXPOFkfCg64S8dN6dKUZdzvxUcXMFV4P6PE6CnImTxoUo67t/QU/J0sbssDtAe8p4woDVD2/jujdiIOcgewZcV0ghbRU1Jx6wGtcCMUyDVfK/htdvM8cgD/z+wjHStMCAHzUZTlGiFpXgD7F75fJ/TWvPdmx/UWuT4eJXamxvBras4fEDOK2dHgWBJ51fQzo3mVfT0Guatrb75UxgNubjuDVxNI7AZwtAG2t6e6h+s8mxtBuZCnTATGOTGVAlVcyNnethClCMyXUufzj3Y6JtZP78nprkf8+bJo5a21fT6fm/i4B66vk/FO572X2dx86Jfoq5ClSZJAQTZAQlW3e9xR+H8IQ0kaquiQzHTXORu0q9qENqGHSj4+R1TejYana3c7+0kHblyGxFW7Q1sao15WMXIxEwxq/VgH7Ue3wkxg6+ptT66HPsxww/932I9PdxNG8tsDJqxn6uIUC7xbToNaB0TGAo2JWjG1R7fbNJ5O1DtyjO9tb5c5ZK0l7G/3Xut+HOyasJuCOciw3m4OzLQ35zYimrPAM+Gf+1pOe/joCH3ygWdq7fQREt0l2Z4m0bwpytYBgGvFVNHz5/F7kV3gn3DkzpETLWDKU5VrGwofh4l1r8L8yJof7CTp2zyK/Sj70mU+iG0MWz2OuEKL3o6H8CxrRdQUu/g6i1wgvpRvfKYau/X360XuaFVDTNe6eyxmeODjQ1h4MMWxw13nIedtfEmdpg6hsY8K3CHQr3RpEYWUBnM5jl7K/HZzN+TbbCES1eVkC2qpg7P2LRZLzNlVdJcz/dbluLzoSHjAzXdpRWXIscq90qr3sn98rtDWHsUjDO4KVgesPZd+m047LFMDEcpo057KtFQXqD/Ki+RUxaO/HeNVdyE0BFvdZyWMuDNhlCGREzCO7hKqsPgBG+/4+R/7QmOD5bY5F3yfjthY7craYFvY653eQX8P3FMEG2ip/5f8/cp4whDXt1cm/0GQBHZFn+f/veNxPBXwWb1uI/DKw8c5+tbaF5HkI+7jSecF+2o2XCOgjXTwWCM+tuD813D0cOLUFnvkqxj/Pp8nVMQZwqVAoplBMMM6rGUBWeKgEQL7I9N7pLlcbHAkE+yXMO1YjfjaFZxHV3/koe38KbaNTAcdI364M5G2/xe/38fta2jSHU/idGXDOugEwRPZ15KAZimjGhXoeY175zVJ1ZAPrTqp46/sMJ7+npZrHq8ApUiHkw1Rm6N8pMU+vmXxYbRQH2fMu6uA/b9FUu56A3nNrAdcYQIYudgQDojOQm8EgzqF5nvbjybSZCm196Po/JrZTNmDDXOjymgbEXwtwa2gzmvo8VWKMFoOzOrxz+NA+EBa8ijZRlTgtQFSDWEXv/7t0dICopu545ErcrnNFEhudrfodCa1YKutTrk9tOeieKyDjBYiql4+MUaXKep/mIJsTiOX6MMwTZNrByC/XChUxNOmkRYkigGzDRp5L5nuxiEMzj6m0kYF4F5xH9xWCsSpwrbeZ0/UsO9yxykrk3klpL1UsU1zIZABDMrdR5f5DPOVJcv1buA9Uc8MYMbiOjKYB7e8JSHpL++Y6D3G0k2svhqiWxsjxGd7jqCKgG0IbdzbyX7v0nypqoFvYn147EnClADJVwKFpTTaZxE4VctFX0I2fQPusQ8w9e3PkPu5UkDHLNJ7fygFR3/C/X+JbF4iBr98/TjNjEJ2xQ2gezJHrziNQDyYQDmVO9GAXZH7QgbGNK0xYQDbVbRhDNSF1+BwZfVCBZzOYjsP9tEfrioRGfkfW7RkTatNUbbPdigGyO0fqJNJ6oRjkMnrJZ7m4mDfCx5DJvCe8iAZ9Fzn+WNpV5uRMELv2bXE4JvD7YEYDxtOGGypOBsjwg8h643nsMB5jQebfM/Ng79WcRrVm2ZMvONU4ikyfCWSNrmQbQiA4gAPvF7R7awrI9nkO1M/F2OYtBnBbC8ie9AhvJyDjYpAZCnUmHZoBMd7618hACuw3AfzMxaBGSZB6vqiZGQwjtCXbPUpGvII25WAGf00F3UV76146MpeRNW/l9Z7l9VN0Uizj8gby5+HrynMXB5jplpgUaScC7nqy8nsFAPccB+k4ArgipnigxQOuVIcmbnbVA8hSd1GlxY3ij/hwriGzdAtc54sEo4Z2potHDDpDlqe9gfvOIWj7Mf74NJ2s79MOfYC/HUZAnYHonZDTef1fEVBL6VyAIYp6qlON9x2O6A0/77VfFcP6I6gRHkdulrHQ5xUO6HOQK5AoZMftsluyCEMOYMjhbmYcqovEHy8KxMu60nP9k8SzliO/5P1kstJyqqTuBMKJBMOZtNtGcnAcx+zGTQReF4LzDu6fzWP240Bah9xL9eBvs6X9cxFVOB/h2n4w04AzkF9s6j9L2b/xBGnH5uw4tBRAhlTBYWSj6Qjnl9X+e5z2YV/npZ8s51bRfjOHZDTV4E/Ioj8j4/wBudlUhzLwfSjtWRCEvycbTkOUkJ/ANNpEUXMXIrd6wMtk2P1dqOUE2nFzYjx+c9iepmd9TCC47O24Zge4RAsCpLY1HfD0ejGg3AP5sy3YlqENtJCe3hKq8A5koisIqPm0p14gO56EqMKlNWOYlh77KBCfm0Dg9kRU3jaeavBq8drPpKP0KzL
-aqzx/IEM9o+lUdQ/0YT0dnrkE3j+Qm/4jFFw2B6ZZOwctlSETMUJuy9DJQIYfuiJcHv4uH/79BOYrZCxLsKeRq/o+kUHw6Qwyq9yy0qYM1edoRHnZx7j/QgL9aTpQi5k5OJAq98AYL3QznaRVbMubBHaLBdzOAkAUeAieHduRIY/l56AYdllIdrmD6nEPZgkG0CuvI1DuRu791oyAz4oXziOwk3SKrLLmOTLzCbTnhqJhEUA9mfcNnvMGmXqnAdzOCkDfp2QBQHZHlN4bTjAcGADkOgJmMnLr03WggV/hPGq7ZwJRLnUjr7sBUdVMe4Y9hsSw3PNktvvItgsLAC4roN9pHtbOvpUCyL4EzQgypM9zPokoxTYTUdX2mgL3G0In6TNk3L3d7y8QcL9DNL3JvALt3ekAV96KxyB7IEpFrUC4TH0NAflNMmkvhnceQMPXD6xi+T1EmY8RBUyIXT4WVwZkPgD8JOihaSbmIH+mKX15W1+sX1QGXLzwd/VNJ0YymYxg2CQbAKiujbJGzrd9oeP3RRRMtrhm2t2zDMDy9l/7K0vHpJIASQSOMSDdR281GcNoCV7DClnTZZmXAViMDbPIrX2XKADUBD3k54s4cwbq4+Ue5a28xUYEOiNXexea+8T2LUdUHd0VUaA4U+T4NxF+s6/MgOXtv45BAlEmZO8C6lLnPa4mWF+R30IyTjPccywarjBQBmB5C6rfYmx5v3x/GMVjqinkXmzPlsVd3vxATCAqArB5ouNmhc0gylh0E1uwJ6JCgbjzbP+/EJVsNfWysGUGbKHe73jaaekYgGS5/xlEwWXzflciN/9fJub6aYLPXnovB53LW55HuyeiHHAa8W/822/HiFo1INlSW/WIf50gg6jAoG2ZBcub2mZAbh3kuiLgW4DcPNUJ5K+CvqKAN6zXnujuXd52cduvN3ILV8exX71zUkLrhFxWIgtWIaqc2SYzBpS3ls9+TxYBjqXNliOqL/Tl7caC7RHFBNMlsOBdZRbctTdjrbOKgE9/O9udG7repBJY0JawGlkG4a7t/e+P3MI06SLgW4jcHMuJGGcmSRZcWeSatn8FclMLlyMSu5DXm6QjMbtE9ksD+GQJbGW/fbmE65oq/hPCq06Wt50UfAaSR4p4vfrb1BJVpS5JOqsRqv1qnl9ZfkS7BvhuLAF8FnZZJx5rKWrSPNuBCE/E7u1BW3FqbBmEuwb4LkXhtc78Yi9nbIGjYA7JFSUAXRfzGS3nl9XxTuZwANEL59kirKSAmb6FXqoBvg1yq1/WFwGhOSZflnuWQdjCt0r5e79TrdkiHuoierRbCgQDfjfkChXSJYJwYsCxKW8tVOV2ExYqNMm2grMOuYULtwYAdu6YEplXQTgVuck1K8ts2HKAp0Hi05Gb97iuCPh01aEvbEP2sfaMK9H21IEyD9G7JGU2bEGMB0RlT/cFwh2lgG+sAw62IQhvLpGJtc01iHLMFaLay0HrZuRgKFB2QzST6SrkB5FLBd83mgB8yswpRC+wl8LIXmUvQFTy5QddWTUXGPWV2LYVH3GLardHVEy6pBGs522uS5s4BKLL305thDr2fXkMDZe4rWgCMCbcwGlxKjFkkFcif3X2Uj66FKjfeiDKIqyIYY1S2eX87WRjJYW5flOiV56NOc6m3u0UuIcO/GKFr17ecbJOtDTwTUA0Sfdg5M9QvzXb7gTd5YheBKpDw5KpbAkfPe/0JlK7pQzO7zaSsUMDbDWipR5GoeHqliEG9p9CGqw7Zf0lF1pqUqba2hGeIUhWyEPdQMBUISoAmIfcexi2KGGt2HG2Dm2W4B3NkT4S0exVCpb6RhjmpnZTiOZTvoAhGptybXsOUntdcwyiaeDsXZRSWTiNhjN/baaK/ieiXLetCL8RDWd0ta0VompuY87TEE24NALRZJuViOZH7INoFSeTY7MEYIqCuYTsV42G6wdDwGYrRG5AbkmszohmF20rIzEZEH5jVKYxpAF3Om3G96XNO8pOrkc0CebPEb1rooOkMX0L2YAm53cQzUVtK6TbnDWViKYh6U0gJgLqt4aD4yuIVpLakfIqeWQvQX5WISMsV4q9E1KZtY2wl0KZDVs588xmFlezNlQiWlEp0wgPPq64oXYLZOwXEE+7CMGcplLD21KQCUQTbdeheNpJP2n30d+2VJAerJORW0m9ub2Loe05BtFSFNmtAKKXs00ZV+c+9SXI287fRJWcaK5esTXq142Ic23rTyZw31nITQwENO+QgrbtLOQWz9F5CjM7QK4m02uaqwzNhe9MeyOzFaN2S0DnJ49MI3p5/LMxLINmDsKEqGVb6sEDIr0dwagvZe2GZvhOsxn356FhTrN+G6jTkEqpDYD83wxJHBNQcS0xkK+e6lhE5fvVTSxjL+c6N7jP2M5hq0Yx4CBEZU9VRVSktz8KZSnqAkLQz3pEC76ci4ZLU7X05H1oJq3+VIWvILyGXtrJtzFapK6A6fQBouUphmzLQd1UNNqWzshQRAvxHYeoOLPtVl63ljGtV5kJeI3xro8c6Ha22eU1bghRz70ZI+2LaDGd3ZF7y25rNosYrEG09NhrEsfNbuuObWtvDoGH3w5RXd5wRHMlJ/j9UESvRnYKBFTf4yh/jd8/BPAX7tvgHkZC4lM7+9RnFnT3gfP2iDIXn0E0aWZHREvIHloElLbI4zwGsNOIlgKby8FeE7j/Nhvc/wG/41NBoWiuOwAAAABJRU5ErkJggg==);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#f3f5ef;--bg:#0e0f11;--card:#1a1c1f;--mut:#9aa0a6;--line:#2a2d31;--lt:#a8e61f;--sh:none}}
-:root[data-theme="dark"]{--ink:#f3f5ef;--bg:#0e0f11;--card:#1a1c1f;--mut:#9aa0a6;--line:#2a2d31;--lt:#a8e61f;--sh:none}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+:root{--bg:#f5f7f2;--card:#fff;--ink:#1b1d18;--muted:#666d60;--em:#4a7a06;--em2:#8fd100;--lime:#8fd100;--dark:#222;--onl:#14200a;--on:#fff;--gold:#4a7a06;--goldbg:#eef8d2;--line:#e1e6da;--ok:#3f7d0a;--okbg:#e8f6cf;--bad:#b3261e;--badbg:#fde8e6;--sh:0 6px 20px rgba(30,40,10,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101210;--card:#1b1e19;--ink:#eef2ea;--muted:#a3ab9b;--em:#9be000;--em2:#8fd100;--lime:#8fd100;--dark:#2a2d27;--onl:#14200a;--on:#06140d;--gold:#9be000;--goldbg:#26330f;--line:#2b3027;--ok:#9be000;--okbg:#26330f;--bad:#ff8f86;--badbg:#38191a;--sh:none}}
+:root[data-theme="dark"]{--bg:#101210;--card:#1b1e19;--ink:#eef2ea;--muted:#a3ab9b;--em:#9be000;--em2:#8fd100;--lime:#8fd100;--dark:#2a2d27;--onl:#14200a;--on:#06140d;--gold:#9be000;--goldbg:#26330f;--line:#2b3027;--ok:#9be000;--okbg:#26330f;--bad:#ff8f86;--badbg:#38191a;--sh:none}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Poppins","Noto Sans Malayalam",system-ui,sans-serif}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:50}
-button,input,select,textarea{font:inherit;color:inherit}
-button{cursor:pointer;border:0;background:none;padding:0}
-.w{max-width:560px;margin:0 auto;padding:18px 16px 120px;min-height:100vh}
-.lg{display:inline-block;background:currentColor;-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;width:1.9em;height:1em}
-h1{font-size:1.6rem;line-height:1.25;margin:0;font-weight:700}h2{font-size:1.05rem;margin:22px 0 10px;display:flex;justify-content:space-between;align-items:center}
-.m{color:var(--mut);font-size:.88rem}
-/* login */
-.sp{min-height:100vh;background:var(--lime);color:#14161a;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;text-align:center;margin:-18px -16px -120px;max-width:none}
-.sp .ic{width:112px;height:112px;border-radius:30px;background:#222;color:#fff;display:grid;place-items:center;font-size:56px;margin-bottom:12px;box-shadow:0 14px 30px rgba(0,0,0,.2)}
-.sp .wm{font-size:2.1rem;font-weight:700;letter-spacing:-.5px;line-height:1.1}.sp .ac{letter-spacing:.35em;font-weight:500;margin:2px 0 30px}
-.sp input{width:100%;max-width:340px;height:54px;border-radius:16px;border:0;background:rgba(255,255,255,.55);padding:0 18px;font-size:1.05rem;text-align:center;outline:none}
-.sp input:focus{background:#fff}
-.go{width:100%;max-width:340px;height:54px;border-radius:16px;background:#14161a;color:var(--lime);font-weight:700;font-size:1.05rem;margin-top:12px}
-.sp p{margin:12px 0 0;font-weight:500;min-height:1.4em}
-.sp .lk{margin-top:26px;font-size:.85rem;opacity:.7;text-decoration:underline}
-/* student */
-.hd{display:flex;align-items:center;gap:10px;margin-bottom:14px}.hd>div{flex:1;min-width:0}
-.rb{position:relative;width:46px;height:46px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:grid;place-items:center}
-.rb svg{width:22px;height:22px}.rb i{position:absolute;top:-3px;right:-3px;min-width:20px;height:20px;border-radius:10px;background:var(--lime);color:#14161a;font:700 .72rem/20px Poppins;text-align:center;font-style:normal}
-.av{background:var(--dk);color:var(--lime);font-weight:700}
-.sr{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0 14px;height:50px;margin:14px 0}
-.sr input{flex:1;border:0;background:none;outline:none;min-width:0}.sr svg{width:20px;color:var(--mut)}
-.urg{display:flex;gap:14px;align-items:center;background:var(--dk);color:#fff;border-radius:20px;padding:14px 16px;margin-bottom:12px;border-left:6px solid var(--lime);text-align:left;width:100%;box-shadow:var(--sh)}
-.urg b{color:var(--lime);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}.urg p{margin:0;font-weight:600}
-.pl{flex:none;width:44px;height:44px;border-radius:50%;background:var(--lime);color:#14161a;display:grid;place-items:center;animation:pl 1.6s infinite}.pl svg{width:22px}
-@keyframes pl{0%{box-shadow:0 0 0 0 rgba(143,209,0,.7)}80%,100%{box-shadow:0 0 0 14px rgba(143,209,0,0)}}
-.ct{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--lime),#7fbf00);color:#14161a;border-radius:24px;padding:20px;margin:6px 0}
-.ct .lg{position:absolute;right:-14px;bottom:-14px;font-size:120px;opacity:.14}.ct small{opacity:.75;font-weight:500}
-.ct h3{margin:2px 0 2px;font-size:1.35rem;line-height:1.25}.ct p{margin:0 0 14px;font-weight:500}
-.bk{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 20px;border-radius:14px;background:#14161a;color:var(--lime);font-weight:600;text-decoration:none}
-.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.cats button{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:.78rem;font-weight:500}
-.cats i{width:100%;aspect-ratio:1;border-radius:18px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;color:var(--lt)}.cats svg{width:28px;height:28px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px;margin-bottom:10px;box-shadow:var(--sh)}
-.row{display:flex;gap:14px;align-items:center}.row>.g{flex:1;min-width:0}.row b{display:block}
-.cv{flex:none;width:58px;height:58px;border-radius:16px;background:var(--lime);color:#14161a;display:grid;place-items:center}.cv svg{width:28px}
-.chip{display:inline-block;padding:1px 10px;border-radius:99px;font-size:.74rem;font-weight:600;background:var(--line);color:var(--mut)}.chip.l{background:var(--lime);color:#14161a}.chip.u{background:var(--bad);color:#fff}
-.op{display:inline-block;margin-top:6px;padding:5px 16px;border-radius:99px;background:var(--dk);color:var(--lime);font-weight:600;font-size:.85rem;text-decoration:none}
-.card.ur{border-left:6px solid var(--lime);background:var(--dk);color:#fff}.card.ur .m{color:#cfd4c4}
-details summary{cursor:pointer;list-style:none;font-weight:600}details summary::-webkit-details-marker{display:none}details p{white-space:pre-wrap;margin:10px 0 0}
-.dh{margin:18px 0 8px;font-weight:700;display:flex;gap:8px;align-items:center}.dh.td{color:var(--lt)}
-.sl{display:flex;gap:14px;align-items:center}.sl .tm{flex:none;width:74px;font-weight:700;color:var(--lt);line-height:1.2}
-nav{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center}
-nav div{width:100%;max-width:560px;display:flex;background:var(--card);border-top:1px solid var(--line);padding:8px 6px calc(8px + env(safe-area-inset-bottom,0px))}
-nav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.7rem;font-weight:600;color:var(--mut)}nav svg{width:24px;height:24px}nav .on{color:var(--lt)}
-nav .on i{background:var(--lime);color:#14161a}nav i{width:46px;height:28px;border-radius:14px;display:grid;place-items:center}
-.md{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.6);display:flex;align-items:flex-end;justify-content:center}
-.md>div{width:100%;max-width:560px;background:var(--card);border-radius:28px 28px 0 0;padding:22px 18px calc(22px + env(safe-area-inset-bottom,0px));max-height:85vh;overflow:auto}
-.btn{display:block;width:100%;height:50px;border-radius:15px;background:var(--lime);color:#14161a;font-weight:700;margin-top:10px}.btn.k{background:var(--dk);color:var(--lime)}.btn.o{background:none;border:2px solid var(--line);color:var(--ink)}
-.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:#14161a;color:var(--lime);padding:10px 18px;border-radius:99px;z-index:70;font-weight:600}
-.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.cg button{position:relative;aspect-ratio:1/.85;border-radius:28px;background:var(--card);border:1.5px solid var(--line);box-shadow:var(--sh);font-size:1.9rem;font-weight:700}
-.cg button.my{border-color:var(--lime);box-shadow:0 0 0 3px rgba(143,209,0,.28)}
-.cg small{position:absolute;left:0;right:0;bottom:9px;font-size:.62rem;font-weight:600;color:var(--lt)}
-.sg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.sg button{position:relative;overflow:hidden;border-radius:26px;padding:20px 8px 18px;text-align:center;font-weight:600;font-size:1rem}
-.sg .ci{width:76px;height:76px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;color:#fff}.sg .ci svg{width:32px}
-.sg .ar{font:700 1.8rem/1.5 Amiri,serif;display:block}
-.sg .rbn{position:absolute;left:0;right:0;top:50px;background:#5ddeb0;color:#fff;font-weight:700;font-size:.85rem;padding:9px 0;text-transform:uppercase}
-.wa{position:fixed;right:16px;bottom:calc(88px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;z-index:45;box-shadow:0 8px 20px rgba(0,0,0,.28)}.wa svg{width:32px;height:32px}
-/* admin */
-body.adm{--ink:#f3f5ef;--bg:#0e0f11;--card:#1a1c1f;--mut:#9aa0a6;--line:#2a2d31;--lt:#a8e61f;--sh:none}
-.at{display:flex;gap:8px;overflow-x:auto;margin:14px -16px;padding:0 16px 4px}.at button{flex:none;padding:8px 16px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:.88rem}.at .on{background:var(--lime);color:#14161a;border-color:var(--lime)}
-label{display:block;font-weight:600;font-size:.85rem;margin:12px 0 4px}
-input.f,select.f,textarea.f{width:100%;min-height:46px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);padding:10px 12px;outline:none}input.f:focus,select.f:focus,textarea.f:focus{border-color:var(--lime)}
-.dys{display:flex;gap:6px;flex-wrap:wrap}.dys button{padding:6px 11px;border-radius:99px;border:1.5px solid var(--line);font-size:.82rem;font-weight:600}.dys .on{background:var(--lime);color:#14161a;border-color:var(--lime)}
-.st{display:grid;grid-template-columns:1fr 1fr;gap:10px}.st .card{text-align:center;margin:0}.st b{font-size:1.8rem;color:var(--lime);display:block}
-.dl{flex:none;min-width:38px;height:38px;padding:0 8px;border-radius:12px;background:rgba(229,72,77,.15);color:var(--bad);display:grid;place-items:center;font-size:.7rem;font-weight:700}.dl svg{width:18px}
-.bz{position:fixed;inset:0;z-index:80;background:rgba(14,15,17,.85);color:var(--lime);display:grid;place-items:center;font-weight:700}
-</style>
-</head>
-<body>
-<div id="app"></div>
-<script id="d" type="application/json">{"notices":[{"id":"n1","t":"Monthly test on 28 Oct","b":"Fiqh and Tajweed. Please revise your notes before the test.","c":"all","lv":1,"d":"2026-10-20"},{"id":"n2","t":"November fee due by 5 Nov","b":"Please pay on time and send a confirmation.","c":"all","lv":0,"d":"2026-10-15"}],"tt":[{"id":"t1","c":"1","dy":[1,2,3,4,5],"tm":"18:00","s":"Quran & Duas","l":""},{"id":"t2","c":"3","dy":[1,2,3,4,5],"tm":"19:00","s":"Tajweed & Fiqh","l":""},{"id":"t3","c":"6","dy":[1,2,3,4,5],"tm":"20:00","s":"Aqeeda & Hadith","l":""},{"id":"t4","c":"9","dy":[6],"tm":"10:00","s":"Tafseer & History","l":""}],"books":[{"id":"b1","t":"Tajweed Basics","by":"Madrasa textbook","c":"3","sj":"j1","u":"","d":"2026-10-10"},{"id":"b2","t":"Fiqh Class 3","by":"Madrasa textbook","c":"3","sj":"j1","u":"","d":"2026-10-09"}],"notes":[{"id":"o1","t":"Tajweed rules – revision","sb":"Tajweed","b":"1. Idgham\n2. Ikhfa\n3. Iqlab\n4. Izhar","c":"3","sj":"j1","u":"","d":"2026-10-18"}],"subjects":[{"id":"j1","n":"Thafheem 1","a":"تفهيم ١","c":"all","col":0},{"id":"j2","n":"Thafheem 2","a":"تفهيم ٢","c":"all","col":1},{"id":"j3","n":"Duroos","a":"الدروس","c":"all","col":2}],"roster":[{"id":"s1","n":"Sample Student","c":"3","h":"db92c7d0f00be1256092f1ae5bb75bea","t":"210"}]}</script>
-<script>
-const $=s=>document.querySelector(s),D=JSON.parse($('#d').textContent);D.subjects=D.subjects||[];D.settings=D.settings||{wa:'',wm:'Assalamu alaikum, I have a doubt.'};
-const ls={g:k=>{try{return localStorage.getItem(k)}catch(e){return null}},s:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
-let lang=ls.g('ta_l')||'en';const ml=()=>lang==='ml';
-const th=ls.g('ta_t');if(th)document.documentElement.dataset.theme=th;
-const T={tag:["Learn. Grow. Succeed.","പഠിക്കാം. വളരാം. വിജയിക്കാം."],ph:["Registered mobile number","രജിസ്റ്റർ ചെയ്ത മൊബൈൽ നമ്പർ"],start:["Get Started","തുടങ്ങാം"],nf:["This number is not registered. Please contact your madrasa.","ഈ നമ്പർ രജിസ്റ്റർ ചെയ്തിട്ടില്ല. മദ്രസയുമായി ബന്ധപ്പെടുക."],hello:["Hello","സലാം"],q:["What do you want to learn today?","ഇന്ന് എന്താണ് പഠിക്കേണ്ടത്?"],srch:["Search books, notes…","പുസ്തകം, നോട്ട്സ് തിരയുക…"],nx:["Next class","അടുത്ത ക്ലാസ്"],home:["Home","ഹോം"],books:["Books","പുസ്തകങ്ങൾ"],notes:["Notes","നോട്ട്സ്"],tt:["Timetable","ടൈംടേബിൾ"],nots:["Notices","അറിയിപ്പുകൾ"],imp:["Important","പ്രധാനം"],open:["Open","തുറക്കുക"],join:["Join","ചേരുക"],ok:["Understood","മനസ്സിലായി"],out:["Log out","ലോഗൗട്ട്"],dark:["Dark / light mode","ഡാർക്ക് / ലൈറ്റ്"],lg:["മലയാളം","English"],none:["Nothing here yet","ഒന്നും ഇല്ല"],lat:["Latest updates","പുതിയവ"],cat:["Categories","വിഭാഗങ്ങൾ"],cls:["Class","ക്ലാസ്"],today:["Today","ഇന്ന്"],soon:["Coming soon","ഉടൻ വരുന്നു"],me:["My profile","എന്റെ പ്രൊഫൈൽ"],sel:["Select Class","ക്ലാസ് തിരഞ്ഞെടുക്കുക"],sels:["Select Subject","വിഷയം തിരഞ്ഞെടുക്കുക"],my:["My class","എന്റെ ക്ലാസ്"],gen:["General","പൊതുവായത്"]};
-const t=k=>T[k][ml()?1:0];
-const DN=[["Sun","ഞായർ"],["Mon","തിങ്കൾ"],["Tue","ചൊവ്വ"],["Wed","ബുധൻ"],["Thu","വ്യാഴം"],["Fri","വെള്ളി"],["Sat","ശനി"]];
-const dn=i=>DN[i][ml()?1:0];
-const CL=["1","2","3","4","5","6","7","8","9","10","+1","+2"];
-const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const safe=u=>/^(https?:\/\/|\/_blob\/|files\/)/.test(u||'')?esc(u):'';
-const P={home:'M4 11l8-7 8 7v9h-5v-6H9v6H4z',books:'M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2zM4 19a2 2 0 012-2h13',notes:'M6 3h9l4 4v14H6zM9 12h7M9 16h7M9 8h3',tt:'M4 5h16v15H4zM8 3v4M16 3v4M4 10h16',nots:'M6 9a6 6 0 0112 0c0 6 2 7 2 7H4s2-1 2-7M10 20a2 2 0 004 0',srch:'M11 4a7 7 0 100 14 7 7 0 000-14zM20 20l-4-4',del:'M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13'};
-const I=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${P[k]}"/></svg>`;
-const f12=h=>{const[a,b]=h.split(':').map(Number);return(a%12||12)+':'+String(b).padStart(2,'0')+(a<12?' AM':' PM')};
-const S={tab:'home',sec:'books',cl:null,sj:null,fc:'',ed:'',q:'',stu:null,at:ls.g('ta_at')||'notices',cf:'',usr:null,art:null,ast:null,ready:0};
-const adm=()=>location.hash==='#admin';
-const seen=()=>{try{return JSON.parse(ls.g('ta_seen')||'[]')}catch(e){return[]}};
-const mine=a=>a.filter(x=>x.c==='all'||x.c===S.stu.c);
-const byD=(a,b)=>(b.d||'').localeCompare(a.d||'');
-async function hp(ph){const n=ph.replace(/\D/g,'').slice(-10),e=new TextEncoder();const k=await crypto.subtle.importKey('raw',e.encode(n),'PBKDF2',false,['deriveBits']);const b=await crypto.subtle.deriveBits({name:'PBKDF2',salt:e.encode('thamheed-v1'),iterations:100000,hash:'SHA-256'},k,128);return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-function nxt(list){let best=null;const n=new Date();list.forEach(e=>(e.dy||[]).forEach(d=>{const[h,m]=e.tm.split(':').map(Number),x=new Date(n);x.setHours(h,m,0,0);x.setDate(x.getDate()+(d-n.getDay()+7)%7);if(x<new Date(n-36e5))x.setDate(x.getDate()+7);if(!best||x<best.x)best={e,x}}));return best}
-function toast(m){const d=document.createElement('div');d.className='toast';d.dataset.tmp=1;d.textContent=m;document.body.append(d);setTimeout(()=>d.remove(),2200)}
-/* ---------- student ---------- */
-const WAP='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z';
-const wab=low=>{const w=(D.settings.wa||'').replace(/\D/g,'');if(!w)return`<button class="wa" ${low?'style="bottom:24px"':''} data-a="nowa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="${WAP}"/></svg></button>`;const m=encodeURIComponent((D.settings.wm||'')+(S.stu?' – '+S.stu.n+', Class '+S.stu.c:''));return`<a class="wa" ${low?'style="bottom:24px"':''} href="https://wa.me/${w}?text=${m}" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="${WAP}"/></svg></a>`};
-const lgn=()=>`<div class="sp"><div class="ic"><span class="lg"></span></div><div class="wm">Thamheed</div><div class="ac">ACADEMY</div><h1 style="font-size:1.25rem;margin-bottom:6px">${t('tag')}</h1><p class="m" style="color:#14161a;opacity:.75;margin:0 0 22px">${t('ph')}</p><input id="ph" type="tel" inputmode="tel" placeholder="98765 43210" autocomplete="tel"><button class="go" data-a="login">${t('start')}</button><p id="er"></p><button class="lk" data-a="lang">${t('lg')}</button><a class="lk" href="#admin" style="color:inherit">Admin</a></div>`;
-const hdr=(ti,sub,bk)=>`<div class="hd">${bk?'<button class="rb" data-a="back" aria-label="Back">←</button>':''}<div><div class="m">${sub||''}</div><h1>${ti}</h1></div><button class="rb" data-a="tab" data-v="nots" aria-label="Notices">${I('nots')}${unread()?`<i>${unread()}</i>`:''}</button><button class="rb av" data-a="tab" data-v="me">${esc(S.stu.n[0])}</button></div>`;
-const unread=()=>mine(D.notices).filter(n=>!seen().includes(n.id)).length;
-const bookC=b=>`<div class="card row"><div class="cv">${I('books')}</div><div class="g"><b>${esc(b.t)}</b><span class="m">${esc(b.by)}</span><br>${safe(b.u)?`<a class="op" href="${safe(b.u)}" target="_blank" rel="noopener">${t('open')}</a>`:`<span class="chip">${t('soon')}</span>`}</div></div>`;
-const noteC=n=>`<details class="card"><summary>${esc(n.t)}</summary><p>${esc(n.b)}</p>${safe(n.u)?`<a class="op" href="${safe(n.u)}" target="_blank" rel="noopener">${t('open')}</a>`:''}</details>`;
-const notC=n=>`<div class="card ${n.lv?'ur':''}"><div class="row"><b class="g">${esc(n.t)}</b>${n.lv?`<span class="chip u">${t('imp')}</span>`:''}</div><p style="margin:6px 0 4px;white-space:pre-wrap">${esc(n.b)}</p><span class="m">${esc(n.d||'')}</span></div>`;
-function sHome(){const l=mine(D.notices).filter(n=>n.lv).sort(byD).slice(0,2),nx=nxt(mine(D.tt)),q=S.q.trim().toLowerCase();
-const res=q?[...mine(D.books).filter(b=>(b.t+b.by).toLowerCase().includes(q)).map(bookC),...mine(D.notes).filter(n=>(n.t+n.sb+n.b).toLowerCase().includes(q)).map(noteC)]:null;
-const lat=[...mine(D.books).map(x=>({...x,k:'b'})),...mine(D.notes).map(x=>({...x,k:'n'}))].sort(byD).slice(0,4);
-return hdr(esc(S.stu.n.split(' ')[0])+'!',t('hello')+',')+`<h1 style="font-size:1.35rem;font-weight:600">${t('q')}</h1><div class="sr">${I('srch')}<input id="q" placeholder="${t('srch')}" value="${esc(S.q)}"></div>`+(res?(res.join('')||`<p class="m">${t('none')}</p>`):`${l.map(n=>`<button class="urg" data-a="tab" data-v="nots"><span class="pl">${I('nots')}</span><div><b>${t('imp')}</b><p>${esc(n.t)}</p></div></button>`).join('')}
-${nx?`<div class="ct"><span class="lg"></span><small>${t('nx')}</small><h3>${esc(nx.e.s)}</h3><p>${t('cls')} ${esc(S.stu.c)} · ${nx.x.toDateString()===new Date().toDateString()?t('today'):dn(nx.x.getDay())} ${f12(nx.e.tm)}</p>${safe(nx.e.l)?`<a class="bk" href="${safe(nx.e.l)}" target="_blank" rel="noopener">▶ ${t('join')}</a>`:`<button class="bk" data-a="tab" data-v="tt">${t('tt')}</button>`}</div>`:''}
-<h2>${t('cat')}</h2><div class="cats">${['books','notes','tt','nots'].map(k=>`<button data-a="tab" data-v="${k}"><i>${I(k)}</i>${t(k)}</button>`).join('')}</div>
-<h2>${t('lat')}</h2>${lat.map(x=>x.k==='b'?bookC(x):noteC(x)).join('')||`<p class="m">${t('none')}</p>`}`)}
-const PAL=[["#fff8e6","#b45309","#fcd34d"],["#fff0f4","#9d2a5a","#fda4b8"],["#f3e8ff","#7e3fa8","#c084fc"],["#e8f3ff","#1d5fa8","#7cb7f5"],["#eaf8e0","#3f7d0a","#a8e61f"],["#fff0e6","#c2410c","#fdba74"]];
-const sjid=x=>D.subjects.some(s=>s.id===x.sj)?x.sj:'';
-const itm=(sec,c,sj)=>D[sec].filter(x=>(x.c==='all'||x.c===c)&&sjid(x)===sj);
-const subs=c=>{const l=D.subjects.filter(s=>s.c==='all'||s.c===c);return[...l,...(['books','notes'].some(k=>D[k].some(x=>(x.c==='all'||x.c===c)&&!sjid(x)))?[{id:'',n:'General',a:'',col:4,g:1}]:[])]};
-function sLib(){const sec=S.tab,bk=sec==='books';
-if(!S.cl)return hdr(t(sec),t('sel'))+`<div class="cg">${CL.map(c=>`<button data-a="cl" data-v="${c}" class="${c===S.stu.c?'my':''}">${c}${c===S.stu.c?`<small>${t('my')}</small>`:''}</button>`).join('')}</div>`;
-if(S.sj==null){const l=subs(S.cl);return hdr(t('cls')+' '+S.cl,t('sels')+' · '+t(sec),1)+(l.length?`<div class="sg">${l.map(s=>{const p=PAL[s.col%6],n=itm(sec,S.cl,s.id).length;return`<button data-a="sj" data-v="${esc(s.id)}" data-n="${n}" style="background:${p[0]};color:${p[1]}"><div class="ci" style="background:${p[2]}">${I(sec)}</div>${s.a?`<span class="ar">${esc(s.a)}</span>`:''}${s.g?t('gen'):esc(s.n)}${n?'':`<div class="rbn">${t('soon')}</div>`}</button>`}).join('')}</div>`:`<p class="m">${t('none')}</p>`)}
-const s=subs(S.cl).find(x=>x.id===S.sj),l=itm(sec,S.cl,S.sj).sort(byD);return hdr(s?(s.g?t('gen'):esc(s.n)):'',t('cls')+' '+S.cl+' · '+t(sec),1)+(l.map(bk?bookC:noteC).join('')||`<p class="m">${t('none')}</p>`)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Poppins",system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--em2);z-index:20}
+h1,h2,h3{margin:0 0 .4em;line-height:1.25;font-weight:800}
+h2{font-size:1.4rem}h3{font-size:1.1rem}
+p{margin:0 0 .8em}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px}
+main{padding-bottom:110px}
+section[hidden]{display:none}
+.sub{color:var(--muted)}
+/* hero */
+.hero{background:var(--em2);color:#fff;padding:26px 0 70px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.06;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M32 4l9 19 19 9-19 9-9 19-9-19-19-9 19-9z' fill='none' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E")}
+.hero .wrap{position:relative}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+.logo{width:38px;height:38px;border-radius:12px;background:var(--gold);display:grid;place-items:center;font:700 1.35rem "Amiri",serif;color:#1c1405}
+.ar{font:700 2.9rem/1.3 "Amiri","Noto Naskh Arabic",serif;margin:26px 0 0;color:#f2cf86}
+.hero h1{font-size:1.9rem;margin:2px 0 8px}
+.hero p{opacity:.9;max-width:46ch}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border:0;border-radius:14px;background:var(--em);color:var(--on);font:800 1rem "Poppins",sans-serif;cursor:pointer;text-decoration:none}
+.btn.gold{background:var(--gold);color:#1c1405}
+.btn.ghost{background:rgba(255,255,255,.14);color:#fff}
+.btn.full{width:100%}
+.btn.sm{min-height:40px;padding:0 16px;border-radius:10px;font-size:.92rem}
+.up{margin-top:-44px;position:relative}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--sh);margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.stats b{display:block;font-size:1.5rem;color:var(--em)}
+.stats span{font-size:.82rem;color:var(--muted)}
+.next{display:flex;align-items:center;gap:14px}
+.ic{flex:none;width:46px;height:46px;border-radius:14px;background:var(--goldbg);color:var(--gold);display:grid;place-items:center}
+.ic svg{width:24px;height:24px}
+.grow{flex:1;min-width:0}
+h2.sec{margin:26px 0 12px}
+.cls{display:grid;gap:12px}
+.cls .card{margin:0;display:flex;gap:14px;align-items:flex-start}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{counter-increment:s;position:relative;padding:4px 0 18px 46px}
+.steps li::before{counter-increment:none;content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--em);color:var(--on);display:grid;place-items:center;font-weight:800}
+.steps li::after{content:"";position:absolute;left:15px;top:36px;bottom:4px;width:2px;background:var(--line)}
+.steps li:last-child{padding-bottom:0}.steps li:last-child::after{display:none}
+/* forms */
+label{display:block;font-weight:700;margin:16px 0 6px}
+input,select{width:100%;min-height:52px;padding:0 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+input:focus,select:focus{border-color:var(--em);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--em) 25%,transparent)}
+.err{color:var(--bad);font-weight:600;margin:12px 0 0;min-height:1.5em}
+.pagehead{background:var(--em2);color:#fff;padding:22px 0 34px}
+.pagehead h2{margin:0}
+.pagehead p{margin:4px 0 0;opacity:.85}
+.pull{margin-top:-20px;position:relative}
+/* timetable */
+.slot{display:flex;gap:14px;align-items:center}
+.time{flex:none;width:76px;text-align:center;font-weight:800;color:var(--em);line-height:1.25}
+.time small{display:block;color:var(--muted);font-weight:600}
+.chip{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.78rem;font-weight:800;background:var(--okbg);color:var(--ok)}
+.chip.d{background:var(--badbg);color:var(--bad)}
+.chip.g{background:var(--goldbg);color:var(--gold)}
+.slot.today{border-color:var(--gold)}
+/* portal */
+.ring{--p:0;width:112px;height:112px;border-radius:50%;background:conic-gradient(var(--ok) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;flex:none}
+.ring div{width:84px;height:84px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-size:1.4rem;font-weight:800}
+.fee{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.fee:last-child{border:0}
+/* nav */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--card);border-top:1px solid var(--line);display:flex;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+.bar button{flex:1;border:0;background:none;color:var(--muted);font:700 .72rem "Poppins",sans-serif;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-radius:12px;cursor:pointer}
+.bar svg{width:24px;height:24px}
+.bar button[aria-selected="true"]{color:var(--em);background:color-mix(in srgb,var(--em) 12%,transparent)}
+.bar button:focus-visible,.btn:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (min-width:640px){.cls{grid-template-columns:1fr 1fr}.ar{font-size:3.6rem}}
+.hc{text-align:center}.hc p{margin-left:auto;margin-right:auto}.hc .row{justify-content:center}
+.mk{display:block;margin:4px auto 6px;width:170px;aspect-ratio:1.86;background:#222;-webkit-mask:url(logo-mark.png) center/contain no-repeat;mask:url(logo-mark.png) center/contain no-repeat}
+.wm{font:800 2.3rem/1.1 "Poppins",sans-serif;color:var(--onl)}
+.wa{letter-spacing:.4em;font-weight:600;color:var(--onl);margin:0 0 22px;padding-left:.4em}
+.hero h1{font-size:1.5rem}
+.hero,.pagehead{color:var(--onl)}
+.btn{background:var(--dark);color:var(--lime)}
+.btn.gold{background:var(--lime);color:var(--onl)}
+.btn.ghost{background:rgba(0,0,0,.1);color:var(--onl)}
+.steps li::before{background:var(--dark);color:var(--lime)}
+.cls .card:nth-child(2) .ic{background:#dfe9fb;color:#3a5ea8}
+.cls .card:nth-child(3) .ic{background:#fdf0c4;color:#9a6a00}
+.cls .card:nth-child(4) .ic{background:#e8dcf8;color:#6b3fb0}
+.slot.today{border-color:var(--lime);border-width:2px}
+.bar button:focus-visible,.btn:focus-visible,a:focus-visible{outline-color:var(--em)}
+.lang{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:12px;z-index:30;border:0;border-radius:99px;padding:8px 14px;background:var(--dark);color:var(--lime);font:700 .85rem "Poppins","Noto Sans Malayalam",sans-serif;cursor:pointer;box-shadow:var(--sh)}
+.acts{display:flex;flex-direction:column;gap:6px}
+.nh{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.chips{margin-bottom:6px}
+.cb{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:6px 14px;font:700 .85rem "Poppins","Noto Sans Malayalam",sans-serif;cursor:pointer;margin:0 6px 8px 0}
+.cb[aria-pressed="true"]{background:var(--dark);color:var(--lime);border-color:var(--dark)}
+body,button,input,select{font-family:"Poppins","Noto Sans Malayalam",system-ui,sans-serif}
+.btn,.bar button{font-family:"Poppins","Noto Sans Malayalam",sans-serif}
+.lang:focus-visible,.cb:focus-visible{outline:3px solid var(--em);outline-offset:2px}
+.ar2{font:700 1.8rem/1.9 "Amiri","Noto Naskh Arabic",serif;margin:8px 0}
+.two{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+details.faq{padding:0}
+details.faq summary{padding:16px 18px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--em);font-size:1.3rem;line-height:1.2}
+details.faq[open] summary::after{content:"–"}
+details.faq p{padding:0 18px 16px;margin:0}
+details.faq summary:focus-visible{outline:3px solid var(--em);outline-offset:-3px;border-radius:18px}
+.hw input{width:24px;min-height:24px;height:24px;flex:none;margin:0;accent-color:var(--em)}
+.hw.done b{text-decoration:line-through;opacity:.6}
+.brand2{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;font-size:1.15rem;color:var(--onl)}
+.brand2 .mk{display:inline-block;width:46px;margin:0}
+.dots{display:flex;justify-content:center;gap:8px;margin:14px 0 2px}
+.dots button{position:relative;width:9px;height:9px;padding:0;border:0;border-radius:99px;background:rgba(0,0,0,.28);cursor:pointer;transition:width .25s}
+.dots button::after{content:"";position:absolute;inset:-12px -4px}
+.dots button[aria-current="true"]{width:26px;background:var(--dark)}
+.dots button:focus-visible{outline:3px solid var(--dark);outline-offset:3px}
 
-function sTT(){const tt=mine(D.tt),td=new Date().getDay();let h=hdr(t('tt'),t('cls')+' '+S.stu.c);[1,2,3,4,5,6,0].forEach(d=>{const r=tt.filter(e=>(e.dy||[]).includes(d)).sort((a,b)=>a.tm.localeCompare(b.tm));if(!r.length)return;h+=`<div class="dh ${d===td?'td':''}">${dn(d)} ${d===td?`<span class="chip l">${t('today')}</span>`:''}</div>`+r.map(e=>`<div class="card sl"><div class="tm">${f12(e.tm)}</div><div class="g" style="flex:1"><b>${esc(e.s)}</b></div>${safe(e.l)?`<a class="op" style="margin:0" href="${safe(e.l)}" target="_blank" rel="noopener">${t('join')}</a>`:''}</div>`).join('')});return h+(tt.length?'':`<p class="m">${t('none')}</p>`)}
-function sNots(){const l=mine(D.notices).sort((a,b)=>(b.lv||0)-(a.lv||0)||byD(a,b));ls.s('ta_seen',JSON.stringify([...new Set([...seen(),...l.map(n=>n.id)])]));return hdr(t('nots'))+(l.map(notC).join('')||`<p class="m">${t('none')}</p>`)}
-const sMe=()=>hdr(t('me'))+`<div class="card" style="text-align:center"><div class="cv av" style="margin:0 auto 10px;width:84px;height:84px;border-radius:50%;font-size:2rem;font-weight:700;background:var(--dk);color:var(--lime)">${esc(S.stu.n[0])}</div><b>${esc(S.stu.n)}</b><br><span class="m">${t('cls')} ${esc(S.stu.c)} · ••••••${esc(S.stu.t||'')}</span></div><button class="btn o" data-a="lang">${t('lg')}</button><button class="btn o" data-a="theme">${t('dark')}</button><button class="btn k" data-a="logout">${t('out')}</button>`;
-function sApp(){const v={home:sHome,books:sLib,notes:sLib,tt:sTT,nots:sNots,me:sMe}[S.tab]();const tabs=['home','books','notes','tt','nots'];
-const pop=mine(D.notices).filter(n=>n.lv&&!seen().includes(n.id));
-return`<div class="w">${v}</div><nav><div>${tabs.map(k=>`<button data-a="tab" data-v="${k}" class="${S.tab===k?'on':''}"><i>${I(k)}</i>${t(k)}</button>`).join('')}</div></nav>`+wab()+(pop.length&&S.tab!=='nots'?`<div class="md"><div><h2 style="margin-top:0"><span class="chip u">${t('imp')}</span></h2>${pop.map(notC).join('')}<button class="btn" data-a="ack">${t('ok')}</button></div></div>`:'')}
-/* ---------- admin ---------- */
-const CS=['all',...CL];const sjn=id=>{const s=D.subjects.find(x=>x.id===id);return s?s.n:'General'};
-const SC={notices:{l:'Notices',f:[['t','Title','text'],['b','Message','area'],['c','Class','cls'],['lv','Mark as IMPORTANT (pops up on every student phone)','chk']],s:x=>`${x.lv?'<span class="chip u">IMPORTANT</span> ':''}${esc(x.t)}<br><span class="m">${x.c==='all'?'All classes':'Class '+esc(x.c)}</span>`},
-tt:{l:'Timetable',f:[['s','Subject','text'],['c','Class','cls'],['dy','Days','days'],['tm','Time','time'],['l','Join link (optional)','text']],s:x=>`${esc(x.s)}<br><span class="m">${(x.dy||[]).map(d=>DN[d][0]).join(', ')} · ${f12(x.tm)} · ${x.c==='all'?'All':'Class '+esc(x.c)}</span>`},
-subjects:{l:'Subjects',f:[['n','Subject name (English)','text'],['a','Arabic name (optional)','text'],['c','Class (or all classes)','cls'],['col','Card colour','col']],s:x=>`${esc(x.n)} ${x.a?esc(x.a):''}<br><span class="m">${x.c==='all'?'All classes':'Class '+esc(x.c)}</span>`},
-books:{l:'Books',f:[['t','Book title','text'],['by','Author / description','text'],['c','Class','cls'],['sj','Subject','sj'],['u','PDF or link','file']],s:x=>`${esc(x.t)}<br><span class="m">${esc(sjn(x.sj))} · ${x.c==='all'?'All':'Class '+esc(x.c)}${x.u?' · file ✓':''}</span>`},
-notes:{l:'Notes',f:[['t','Title','text'],['b','Note text','area'],['c','Class','cls'],['sj','Subject','sj'],['u','Attachment (optional)','file']],s:x=>`${esc(x.t)}<br><span class="m">${esc(sjn(x.sj))} · ${x.c==='all'?'All':'Class '+esc(x.c)}</span>`},
-roster:{l:'Students',f:[['n','Student name','text'],['c','Class','cls1'],['ph','Registered mobile number','tel']],s:x=>`${esc(x.n)}<br><span class="m">Class ${esc(x.c)} · ••••••${esc(x.t)}</span>`}};
-const fld=([k,l,ty],v)=>{const id='f_'+k,e0=v&&v[k];let e;
-if(ty==='area')e=`<textarea class="f" id="${id}" rows="4">${esc(e0)}</textarea>`;
-else if(ty==='cls'||ty==='cls1')e=`<select class="f" id="${id}">${(ty==='cls'?CS:CL).map(c=>`<option value="${c}" ${c===e0?'selected':''}>${c==='all'?'All classes':'Class '+c}</option>`).join('')}</select>`;
-else if(ty==='sj')e=`<select class="f" id="${id}"><option value="">General (no subject)</option>${D.subjects.map(s=>`<option value="${esc(s.id)}" ${s.id===e0?'selected':''}>${esc(s.n)} · ${s.c==='all'?'All classes':'Class '+esc(s.c)}</option>`).join('')}</select>`;
-else if(ty==='col')e=`<select class="f" id="${id}">${['Yellow','Pink','Purple','Blue','Green','Orange'].map((c,i)=>`<option value="${i}" ${i===+e0?'selected':''}>${c}</option>`).join('')}</select>`;
-else if(ty==='chk')return`<label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="${id}" ${e0?'checked':''} style="width:22px;height:22px;accent-color:#8fd100"> ${l}</label>`;
-else if(ty==='days')e=`<div class="dys">${[1,2,3,4,5,6,0].map(d=>`<button data-a="dy" data-d="${d}" class="dyb ${v&&(v.dy||[]).includes(d)?'on':''}">${DN[d][0]}</button>`).join('')}</div>`;
-else if(ty==='file')e=`<input class="f" id="${id}" value="${esc(e0)}" placeholder="https://… or upload below"><input type="file" id="fu" accept=".pdf,image/*" style="margin-top:8px;width:100%" ${S.ast||GH()?'':'hidden'}>`;
-else e=`<input class="f" id="${id}" type="${ty==='time'?'time':ty==='tel'?'tel':'text'}" value="${esc(e0)}">`;
-return`<label>${l}</label>${e}`};
-function aApp(){const k=S.at,c=SC[k]||{f:[]},list=D[k]||[],ed=S.ed&&list.find(x=>x.id===S.ed),vis=list.map((x,i)=>[x,i]).filter(([x])=>!S.fc||x.c===S.fc||x.c==='all');
-return`<div class="w"><div class="hd"><span class="lg" style="font-size:34px;color:var(--lime)"></span><div><h1 style="font-size:1.25rem">Thamheed Admin</h1><span class="m">Changes go live instantly</span></div><a class="rb" href="#" data-a="stuapp" style="text-decoration:none;font-size:.7rem;font-weight:700">APP</a></div>
-<div class="at">${['overview',...Object.keys(SC),'settings'].map(x=>`<button data-a="at" data-v="${x}" class="${k===x?'on':''}">${x==='overview'?'Overview':x==='settings'?'Settings':SC[x].l}</button>`).join('')}</div>`+(k==='settings'?aSet():k==='overview'?`<div class="st">${Object.keys(SC).map(x=>`<div class="card"><b>${D[x].length}</b>${SC[x].l}</div>`).join('')}</div><h2>Student link</h2><div class="card"><p class="m" style="margin:0 0 8px">Share this link with students. They enter their registered mobile number to log in.</p><code style="word-break:break-all;color:var(--lime)">${esc(location.href.split('#')[0])}</code><button class="btn k" data-a="copy">Copy link</button></div>`:`<div class="card"><b>${ed?'Edit item':'Add new'}</b>${c.f.map(f=>fld(f,ed)).join('')}<button class="btn" data-a="add">${ed?'Save changes':'Add'} &amp; publish</button>${ed?'<button class="btn o" data-a="cancel">Cancel</button>':''}</div><h2>${c.l} (${vis.length})</h2><select class="f" id="fc" style="margin-bottom:12px"><option value="">Show: all classes</option>${CL.map(x=>`<option value="${x}" ${S.fc===x?'selected':''}>Class ${x}</option>`).join('')}</select>${vis.map(([x,i])=>`<div class="card row"><div class="g">${c.s(x)}</div>${k!=='roster'?`<button class="dl" style="background:rgba(143,209,0,.16);color:var(--lime)" data-a="edit" data-i="${i}">Edit</button>`:''}<button class="dl" data-a="del" data-i="${i}">${S.cf===k+i?'Sure?':I('del')}</button></div>`).join('')||'<p class="m">Empty</p>'}`)+`</div>`}
-const aLock=m=>`<div class="w" style="text-align:center;padding-top:20vh"><span class="lg" style="font-size:56px;color:var(--lime)"></span><h1 style="margin:14px 0 8px">Admin</h1><p class="m">${m}</p><a class="btn" style="display:grid;place-items:center;text-decoration:none" href="#">Student app</a></div>`;
-const GH=()=>{try{const g=JSON.parse(ls.g('ta_gh')||'null');return g&&g.o&&g.r&&g.tk?g:null}catch(e){return null}};
-const b64=u=>{let s='';for(let i=0;i<u.length;i+=8192)s+=String.fromCharCode.apply(null,u.subarray(i,i+8192));return btoa(s)};
-const ghForm=()=>{const g=GH()||{b:'main',p:'index.html'};return`<div class="card"><b>GitHub connection</b><p class="m">The repository where this app is hosted (GitHub Pages). The token is stored only in this browser.</p>${[['o','Owner (GitHub username)'],['r','Repository name'],['b','Branch'],['p','File path (usually index.html)'],['tk','Personal access token (Contents: read &amp; write)']].map(([k,l])=>`<label>${l}</label><input class="f" id="g_${k}" ${k==='tk'?'type="password"':''} value="${esc(g[k]||'')}">`).join('')}<button class="btn" data-a="savegh">Save connection</button></div>`};
-const aSetup=()=>`<div class="w"><div class="hd"><span class="lg" style="font-size:34px;color:var(--lime)"></span><div><h1 style="font-size:1.25rem">Admin setup</h1><span class="m">Connect your GitHub repository to publish changes</span></div></div>${ghForm()}<a class="btn" style="display:grid;place-items:center;text-decoration:none" href="#">Student app</a></div>`;
-const aSet=()=>`<div class="card"><b>WhatsApp doubt button</b><p class="m">A green WhatsApp button appears for students and visitors. Number with country code, digits only (e.g. 919876543210).</p><label>WhatsApp number</label><input class="f" id="s_wa" type="tel" value="${esc(D.settings.wa)}"><label>Default message</label><input class="f" id="s_wm" value="${esc(D.settings.wm)}"><button class="btn" data-a="savest">Save &amp; publish</button></div>${S.art?'':ghForm()}`;
-const build=()=>{const c=document.documentElement.cloneNode(true);c.removeAttribute('data-theme');c.querySelector('#app').innerHTML='';c.querySelectorAll('[data-tmp]').forEach(e=>e.remove());c.querySelector('body').removeAttribute('class');c.querySelector('#d').textContent=JSON.stringify(D).replace(/</g,'\\u003c');return'<!DOCTYPE html>\n'+c.outerHTML};
-const ghPut=async(g,path,b64c,msg)=>{const api=`https://api.github.com/repos/${g.o}/${g.r}/contents/${path}`,h={Authorization:'Bearer '+g.tk,Accept:'application/vnd.github+json'};let sha;const r=await fetch(api+'?ref='+encodeURIComponent(g.b),{headers:h});if(r.ok)sha=(await r.json()).sha;else if(r.status!==404)throw r.status;const body={message:msg,content:b64c,branch:g.b};if(sha)body.sha=sha;const w=await fetch(api,{method:'PUT',headers:h,body:JSON.stringify(body)});if(!w.ok)throw w.status};
-async function pub(){document.body.insertAdjacentHTML('beforeend','<div class="bz" data-tmp="1">Publishing…</div>');const done=()=>document.querySelector('.bz')?.remove();
-if(S.art){try{await S.art.publish(build())}catch(e){done();toast(e&&e.code==='conflict'?'Updated elsewhere – reloading':'Could not publish')}return}
-const g=GH();if(!g){done();return toast('Connect GitHub first')}
-try{await ghPut(g,g.p,b64(new TextEncoder().encode(build())),'Update from admin');done();toast('Published ✓ – students see it within ~1–2 minutes');draw()}catch(e){done();toast(e===401||e===403?'GitHub token rejected':e===404?'Repository or path not found':'Could not publish ('+e+')');draw()}}
-async function ghUp(f){const g=GH();if(!g)throw 0;const n=Date.now().toString(36)+'-'+f.name.replace(/[^\w.\-]/g,'_');await ghPut(g,'files/'+n,b64(new Uint8Array(await f.arrayBuffer())),'Upload '+n);return'files/'+n}
-async function add(){const k=S.at,c=SC[k],old=S.ed&&D[k].find(x=>x.id===S.ed),o=old?{...old}:{id:Date.now().toString(36),d:new Date().toISOString().slice(0,10)};
-for(const[f,l,ty]of c.f){const e=$('#f_'+f);if(ty==='days')o[f]=[...document.querySelectorAll('.dyb.on')].map(b=>+b.dataset.d);else if(ty==='chk')o[f]=e.checked?1:0;else if(ty==='col')o[f]=+e.value;else o[f]=e.value.trim()}
-if(k==='roster'){const n=o.ph.replace(/\D/g,'');if(!o.n||n.length<10)return toast('Name and 10-digit mobile needed');o.h=await hp(n);if(D.roster.some(r=>r.h===o.h))return toast('This number is already registered');o.t=n.slice(-3);delete o.ph}
-else if((k==='notices'&&!o.t)||(k==='tt'&&(!o.s||!o.tm||!o.dy.length))||(k==='books'&&!o.t)||(k==='notes'&&!o.t)||(k==='subjects'&&!o.n))return toast('Please fill the required fields');
-if((k==='books'||k==='notes')&&o.sj){const s=D.subjects.find(x=>x.id===o.sj);if(s&&s.c!=='all'&&s.c!==o.c)return toast('This subject belongs to Class '+s.c+' – pick that class')}
-if(old)Object.assign(old,o);else D[k][k==='tt'||k==='roster'||k==='subjects'?'push':'unshift'](o);pub()}
-/* ---------- events ---------- */
-document.addEventListener('click',async e=>{const b=e.target.closest('[data-a]');if(!b)return;const a=b.dataset.a;
-if(a==='login'){const v=$('#ph').value,er=$('#er');if(v.replace(/\D/g,'').length<10){er.textContent=t('nf');return}const h=await hp(v),r=D.roster.find(x=>x.h===h);if(!r){er.textContent=t('nf');return}ls.s('ta_sid',r.id);S.stu=r;S.tab='home';draw()}
-else if(a==='tab'){S.tab=b.dataset.v;S.cl=S.sj=null;draw();scrollTo(0,0)}
-else if(a==='cl'){S.cl=b.dataset.v;S.sj=null;draw();scrollTo(0,0)}
-else if(a==='sj'){if(b.dataset.n==='0')return toast(t('soon'));S.sj=b.dataset.v;draw();scrollTo(0,0)}
-else if(a==='back'){if(S.sj!=null)S.sj=null;else S.cl=null;draw()}
-else if(a==='edit'){S.ed=D[S.at][+b.dataset.i].id;draw();scrollTo(0,0)}
-else if(a==='cancel'){S.ed='';draw()}
-else if(a==='ack'){ls.s('ta_seen',JSON.stringify([...new Set([...seen(),...mine(D.notices).map(n=>n.id)])]));draw()}
-else if(a==='lang'){lang=ml()?'en':'ml';ls.s('ta_l',lang);draw()}
-else if(a==='theme'){const r=document.documentElement,dk=matchMedia('(prefers-color-scheme:dark)').matches,n=(r.dataset.theme||(dk?'dark':'light'))==='dark'?'light':'dark';r.dataset.theme=n;ls.s('ta_t',n)}
-else if(a==='logout'){ls.s('ta_sid','');S.stu=null;draw()}
-else if(a==='at'){S.at=b.dataset.v;S.cf='';S.ed='';S.fc='';ls.s('ta_at',S.at);draw()}
-else if(a==='dy')b.classList.toggle('on');
-else if(a==='add')add();
-else if(a==='del'){const k=S.at+b.dataset.i;if(S.cf!==k){S.cf=k;draw();return}D[S.at].splice(+b.dataset.i,1);S.cf='';pub()}
-else if(a==='copy'){try{await navigator.clipboard.writeText(location.href.split('#')[0]);toast('Link copied')}catch(x){toast('Copy the link above')}}
-else if(a==='savegh'){const g={};['o','r','b','p','tk'].forEach(k=>g[k]=($('#g_'+k).value||'').trim());g.b=g.b||'main';g.p=g.p||'index.html';if(!g.o||!g.r||!g.tk)return toast('Owner, repository and token are required');ls.s('ta_gh',JSON.stringify(g));toast('Saved');draw()}
-else if(a==='nowa')toast('WhatsApp number not set yet – Admin › Settings')
-else if(a==='savest'){D.settings.wa=$('#s_wa').value.replace(/\D/g,'');D.settings.wm=$('#s_wm').value.trim();pub()}
-else if(a==='stuapp'){e.preventDefault();location.hash=''}});
-document.addEventListener('input',e=>{if(e.target.id==='q'){S.q=e.target.value;const p=e.target.selectionStart;draw();const q=$('#q');q.focus();q.setSelectionRange(p,p)}});
-document.addEventListener('change',async e=>{if(e.target.id==='fc'){S.fc=e.target.value;draw();return}if(e.target.id==='fu'&&e.target.files[0]){try{toast('Uploading…');const f=e.target.files[0],u=S.ast?(await S.ast.upload(f)).url:await ghUp(f);$('#f_u').value=u;toast('Uploaded ✓')}catch(x){toast('Upload failed')}}});
-function draw(){const a=$('#app');document.body.className=adm()?'adm':'';
-if(adm()){a.innerHTML=!S.ready?aLock('Checking access…'):(S.usr&&S.usr.isOwner())||(!S.usr&&GH())?aApp():!S.usr?aSetup():aLock('Only the academy admin can open this page. Sign in to Claude with the admin account.');return}
-a.innerHTML=S.stu?sApp():lgn()+wab(1)}
-async function boot(){const sid=ls.g('ta_sid');S.stu=D.roster.find(r=>r.id===sid)||null;draw();
-if(adm()&&!S.ready){const g=async n=>{try{return window.claude?await claude.use(n):null}catch(e){return null}};[S.usr,S.art,S.ast]=await Promise.all([g('user'),g('artifact'),g('assets')]);S.ready=1;draw()}}
-addEventListener('hashchange',()=>{S.ready?draw():boot();if(!adm())draw()});
-let RAW=$('#d').textContent;
-async function poll(){if(adm()||window.claude)return;try{const r=await fetch(location.href.split('#')[0].split('?')[0]+'?v='+Date.now(),{cache:'no-store'}),h=await r.text(),m=h.match(/<script id="d" type="application\/json">([\s\S]*?)<\/script>/);if(!m||m[1]===RAW)return;if(document.activeElement&&/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;RAW=m[1];const n=JSON.parse(RAW);Object.keys(D).forEach(k=>delete D[k]);Object.assign(D,n);D.subjects=D.subjects||[];D.settings=D.settings||{wa:'',wm:''};if(S.stu)S.stu=D.roster.find(r=>r.id===S.stu.id)||null;draw()}catch(e){}}
-setInterval(poll,45000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)poll()});
-boot();
+/* v7 polish */
+.hero,.pagehead{background:linear-gradient(165deg,#a8e51f,#8fd100 60%,#76b300)}
+.hero{border-radius:0 0 34px 34px}.pagehead{border-radius:0 0 26px 26px}
+.card{border-radius:20px}
+.stats>div+div{border-left:1px solid var(--line)}
+.ic{background:linear-gradient(145deg,var(--goldbg),var(--card));box-shadow:inset 0 0 0 1px var(--line)}
+h2.sec{display:flex;align-items:center;gap:10px}h2.sec::before{content:"";width:5px;height:1.1em;border-radius:3px;background:var(--lime)}
+.bar{border-radius:22px 22px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.08)}
+.bar button[aria-selected="true"]{background:var(--dark);color:var(--lime)}
+.slider{box-shadow:0 18px 40px rgba(20,32,10,.35),0 0 0 5px rgba(255,255,255,.35);animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(16px) scale(.97)}}
+.btn{transition:transform .12s}.btn:active{transform:scale(.97)}
+.slot.today{background:linear-gradient(120deg,var(--goldbg),var(--card) 60%)}
+.greet{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hj{font-weight:700;color:var(--em);text-align:right;font-size:.88rem}
+.qz h3{margin:8px 0 12px}
+.opt{display:block;width:100%;min-height:48px;margin:0 0 8px;padding:0 14px;text-align:left;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:700 .95rem "Poppins","Noto Sans Malayalam",sans-serif;cursor:pointer}
+.opt.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+.opt.bad{background:var(--badbg);border-color:var(--bad);color:var(--bad)}
+.opt:focus-visible{outline:3px solid var(--em);outline-offset:2px}
+.pg div{height:10px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:8px}
+.pg i{display:block;height:100%;background:var(--ok);border-radius:99px;transition:width .4s}
+.thm{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:12px;z-index:30;width:36px;height:36px;border:0;border-radius:50%;background:var(--dark);color:var(--lime);font-size:1.05rem;cursor:pointer;box-shadow:var(--sh)}
+.fab{position:fixed;right:14px;bottom:calc(86px + env(safe-area-inset-bottom,0px));z-index:15;width:54px;height:54px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.fab svg{width:28px;height:28px}
+@media (prefers-reduced-motion:reduce){.slider{animation:none}}
+.bar button.adm{display:none}.bar.isadm button.adm{display:flex}
+#adm label{margin:12px 0 4px;font-size:.88rem}#adm .card{padding:16px}
+#adm h3{font-size:1rem;margin:16px 0 0}
+.chk{display:flex!important;align-items:center;gap:10px}.chk input{width:22px;min-height:22px;height:22px}
+.pst{font-weight:700;margin:10px 0 0;min-height:1.4em}
+.gate{position:fixed;inset:0;z-index:25;background:radial-gradient(120% 70% at 50% 0%,#1f2e0c,#0e0f0d 62%);display:flex;align-items:center;justify-content:center;padding:24px;overflow:auto}
+#gate[hidden]{display:none}
+.gbox{width:min(100%,380px);text-align:center;color:#f3f4ef}
+.gate .mk{background:#fff;width:230px;margin:0 auto 26px}
+.gate h1{font-size:1.7rem;margin:0 0 6px}
+.gate p{color:#b9beb0;margin:0 0 6px}
+.gate label{color:#e7eadf;text-align:left;margin-top:22px}
+.gate input{background:#1b1d19;border-color:#34382f;color:#fff;text-align:center;font-size:1.2rem;letter-spacing:.06em}
+.gate .err{color:#ff9a92}
+.gate .btn{background:var(--lime);color:#14200a}
+.gl{display:block;margin-top:18px;color:#c6e86b;font-weight:600;font-size:.92rem}
+body.gated main,body.gated .bar,body.gated .fab{visibility:hidden}
+body.gated .lang,body.gated .thm{background:var(--lime);color:#14200a}
+/* v7 poster slider: peek + auto slide */
+.slider{position:relative;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;margin-inline:calc(50% - 50vw);padding:8px calc((100vw - min(76vw,320px))/2) 20px;width:auto;aspect-ratio:auto;border-radius:0;background:none;box-shadow:none;touch-action:auto}
+.slider::-webkit-scrollbar{display:none}
+.slide{flex:none;width:min(76vw,320px);aspect-ratio:3/4;scroll-snap-align:center;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 18px 38px rgba(0,0,0,.3);transform:scale(.9);opacity:.6;transition:transform .45s ease,opacity .45s ease}
+.slide.on{transform:scale(1);opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;display:block;user-select:none;-webkit-user-drag:none}
+.hc .row{margin-top:10px}
+.hero{padding-top:58px}
+@media (prefers-reduced-motion:reduce){.slide{transition:none}}
+.toast{position:fixed;top:calc(env(safe-area-inset-top,0px) + 56px);left:12px;right:12px;z-index:60;background:var(--dark);color:var(--lime);border-radius:14px;padding:12px 16px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.rcw{position:fixed;inset:0;z-index:100;background:#4d5249;overflow:auto;padding:calc(env(safe-area-inset-top,0px) + 12px) 12px calc(24px + env(safe-area-inset-bottom,0px))}
+.rcb{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
+.rch{color:#e8efe3;font-size:.8rem;text-align:center;margin:0 auto 12px;max-width:520px}
+.sw{margin:0 auto;overflow:hidden}
+.sheet{position:relative;width:794px;height:1123px;padding:44px;box-sizing:border-box;background:#fff;color:#111;transform-origin:0 0;font-size:14px;line-height:1.45;box-shadow:0 8px 30px rgba(0,0,0,.35)}
+.sheet .mk{display:inline-block;width:70px;margin:0;background:#222}
+.sh{display:flex;justify-content:space-between;align-items:center;border-bottom:4px solid #8fd100;padding-bottom:14px}
+.shl{display:flex;align-items:center;gap:14px}
+.shn{font-size:26px;display:block;line-height:1.1}
+.shs{font-size:11px;letter-spacing:.18em;color:#555}
+.shr{text-align:right;font-size:13px;color:#444}.shr b{display:block;font-size:18px;color:#111}
+.info{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:10px;background:#f4f8e8;border:1px solid #d7e2bb;border-radius:10px;padding:12px 14px;margin-top:18px}
+.info small,.bx small{display:block;color:#666;font-size:11px}
+.info b{font-size:15px}
+.sheet h4{margin:22px 0 8px;font-size:14px;letter-spacing:.05em;text-transform:uppercase}
+.sheet table{width:100%;min-width:0;border-collapse:collapse}
+.sheet th,.sheet td{border:1px solid #cfd6c4;padding:7px 9px;font-size:13px;text-align:left}
+.sheet th{background:#eaf5c9}
+.sheet .tt td{font-weight:800;background:#f4f8e8}
+.two2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.bx{border:1px solid #cfd6c4;border-radius:10px;padding:12px 14px}
+.bx b{display:block;font-size:28px;color:#2f5d00;line-height:1.2}
+.bx span{font-size:12px;color:#555}
+.rm{min-height:84px;border:1px solid #cfd6c4;border-radius:10px;padding:12px 14px}
+.sig{display:flex;justify-content:space-between;margin-top:90px}
+.sig div{width:28%;border-top:1px solid #333;padding-top:6px;text-align:center;font-size:12px}
+.ft{position:absolute;left:0;right:0;bottom:30px;text-align:center;font-size:11px;color:#666}
+@media print{@page{size:A4;margin:0}body>*:not(#rc){display:none!important}body::before{display:none}.rcw{position:static;background:none;padding:0;overflow:visible}.rcb,.rch{display:none}.sw{width:210mm!important;height:297mm!important;overflow:visible}.sheet{width:210mm;height:297mm;transform:none!important;box-shadow:none}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.inst{position:relative;display:flex;gap:12px;align-items:center;padding-right:44px}
+.inst .x{position:absolute;top:4px;right:6px;min-width:40px;min-height:40px;border:0;background:none;color:var(--muted);font-size:1.5rem;line-height:1;cursor:pointer}
+.inst .sub{font-size:.88rem}
+.inst[hidden],#instgo[hidden]{display:none!important}
+/* curved-square theme */
+h2.sec{display:flex;align-items:center;gap:10px}
+h2.sec::before{content:"";width:5px;height:24px;border-radius:4px;background:var(--lime);flex:none}
+.card{border:0;border-radius:26px;box-shadow:0 8px 24px rgba(30,45,10,.07)}
+.btn{border-radius:18px}
+.bar{border-top:0;border-radius:26px 26px 0 0;box-shadow:0 -8px 26px rgba(0,0,0,.08)}
+.pagehead{position:relative;padding:64px 0 56px}
+.pagehead::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:30px;background:var(--bg);border-radius:32px 32px 0 0}
+.pull{margin-top:-6px}
+.phrow{display:flex;align-items:center;gap:14px}
+.phrow h2{margin:0}.phrow p{margin:2px 0 0;font-size:.88rem;opacity:.85}
+.back{flex:none;width:48px;height:48px;border:0;border-radius:16px;background:rgba(0,0,0,.12);color:var(--onl);display:grid;place-items:center;cursor:pointer}
+.back svg{width:24px;height:24px}
+.chips,.chips.scroll{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:8px;margin-bottom:6px}
+.chips::-webkit-scrollbar{display:none}
+.chips .cb{flex:none;margin:0;border-radius:16px;padding:8px 16px}
+.acad,.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tile,.wide,.ctile{border:0;background:var(--card);color:var(--ink);font-family:"Poppins","Noto Sans Malayalam",sans-serif;box-shadow:0 8px 24px rgba(30,45,10,.07);cursor:pointer}
+.tile:active,.wide:active,.ctile:active{transform:scale(.97)}
+.tile{display:flex;flex-direction:column;align-items:center;gap:10px;padding:22px 10px 18px;border-radius:28px;font-weight:700;font-size:1rem;text-align:center;line-height:1.3}
+.tile small{display:block;font-weight:600;color:var(--muted);font-size:.78rem;margin-top:-6px}
+.cir{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:#c9ef7a;color:#26400a}
+.cir svg{width:30px;height:30px}
+.cir.c2{background:#bfe3ff;color:#0b4a7a}.cir.c3{background:#ffe2a8;color:#7a4a00}.cir.c4{background:#e7d3ff;color:#4b2a8a}.cir.c5{background:#ffd0dc;color:#8a2243}
+.wide{grid-column:1/-1;display:flex;align-items:center;gap:16px;padding:18px;border-radius:28px;text-align:left}
+.wide .tx{flex:1;min-width:0}.wide b{display:block;font-size:1.05rem}.wide small{color:var(--muted);font-weight:600}
+.sq{flex:none;width:64px;height:64px;border-radius:20px;background:linear-gradient(135deg,#f5a31a,#e07b00);color:#fff;display:grid;place-items:center;box-shadow:0 8px 18px rgba(224,123,0,.3)}
+.sq svg{width:30px;height:30px}.chv svg{width:24px;height:24px;color:var(--muted)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ctile{aspect-ratio:1/.9;border-radius:26px;font-weight:800;font-size:1.7rem}
+.ctile.mine{outline:3px solid var(--lime);outline-offset:-3px}
+.feec{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;margin:0}
+.feec small{display:block;color:var(--muted)}.feec b{font-size:1.3rem;color:var(--em)}
+.tile:focus-visible,.wide:focus-visible,.ctile:focus-visible,.back:focus-visible{outline:3px solid var(--em);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.tile:active,.wide:active,.ctile:active{transform:none}}
+.opt{display:block;width:100%;text-align:left;padding:16px 18px;margin:0 0 12px;border:2px solid var(--line);border-radius:20px;background:var(--card);color:var(--ink);font:600 1rem "Poppins","Noto Sans Malayalam",sans-serif;cursor:pointer}
+.opt:disabled{opacity:1;color:var(--ink);cursor:default}
+.opt.sel{border-color:var(--em)}.opt.ok{border-color:var(--ok);background:var(--okbg)}.opt.no{border-color:var(--bad);background:var(--badbg)}
+.qbar,.hbar{height:10px;border-radius:6px;background:var(--line);overflow:hidden;margin:0 0 14px}
+.qbar i,.hbar i{display:block;height:100%;background:var(--lime)}
+.hbar{height:12px;margin:8px 0 6px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center}
+.cal i{display:block}.cal .wk{font-size:.72rem;color:var(--muted);font-weight:700}
+.cd{display:grid;place-items:center;aspect-ratio:1;border-radius:12px;font-size:.85rem;font-weight:600;background:var(--bg);color:var(--muted)}
+.cd.p{background:var(--okbg);color:var(--ok)}.cd.a{background:var(--badbg);color:var(--bad)}.cd.t{outline:2px solid var(--em);outline-offset:1px}
+.cd.f,.cd.n{background:none}
+.calh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.calh h3{margin:0}
+.calnav{width:42px;height:42px;border:0;border-radius:14px;background:var(--bg);color:var(--ink);font-size:1.4rem;cursor:pointer}
+.calnav:disabled{opacity:.35;cursor:default}
+.leg{display:flex;gap:16px;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-top:14px}
+.leg b.cd{display:inline-block;width:12px;height:12px;aspect-ratio:auto;border-radius:4px;vertical-align:-1px;margin-right:4px}
+.aud audio{width:100%;margin-top:12px}
+</style>
+<script src="config.js"></script>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#8fd100">
+</head>
+<body class="gated">
+<button class="thm" id="thm" aria-label="Switch light or dark theme">◐</button>
+<button class="lang" id="lang" aria-label="Change language">മലയാളം</button>
+<div id="gate" class="gate" role="dialog" aria-modal="true" aria-label="Login">
+<div class="gbox"><span class="mk" role="img" aria-label="Thamheed Academy logo"></span>
+<h1>Welcome</h1><p>Enter the parent code the academy gave you.</p>
+<label for="gph">Parent code</label>
+<input id="gph" type="text" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="K7P29XQM">
+<p class="err" id="gerr" role="alert"></p>
+<button class="btn gold full" id="gin">Enter the app</button>
+<a class="gl" id="gwa" target="_blank" rel="noopener" href="#">Not registered yet? Apply on WhatsApp</a>
+<a class="gl" id="gsl" href="#">Staff login</a>
+<div id="gstaff" hidden><label for="gem">Staff email</label><input id="gem" type="email" autocomplete="username"><label for="gpw">Password</label><input id="gpw" type="password" autocomplete="current-password"><button class="btn gold full" id="gsi" style="margin-top:16px">Staff sign in</button></div>
+</div></div>
+<script id="ta-data" type="application/json">{"WHATSAPP":"918547476228","PHONE":"918304882237","NOTICES":[{"k":"Important","d":"20 Oct","t":"Monthly test on 28 Oct","tm":"ഒക്ടോബർ 28-ന് പ്രതിമാസ പരീക്ഷ","b":"Fiqh and Tajweed. Please revise your notes before the test.","bm":"ഫിഖ്ഹ്, തജ്‌വീദ് പരീക്ഷ. പരീക്ഷയ്ക്ക് മുമ്പ് നോട്ടുകൾ റിവിഷൻ ചെയ്യൂ."},{"k":"Holiday","d":"19 Oct","t":"No class on Friday, 23 Oct","tm":"23 ഒക്ടോബർ വെള്ളിയാഴ്ച ക്ലാസ് ഉണ്ടായിരിക്കില്ല","b":"Classes resume on Monday as usual.","bm":"തിങ്കളാഴ്ച മുതൽ പതിവുപോലെ ക്ലാസുകൾ."},{"k":"Fees","d":"15 Oct","t":"November fee due by 5 Nov","tm":"നവംബർ ഫീസ് നവംബർ 5-നകം അടയ്ക്കണം","b":"Please pay on time and send us a confirmation.","bm":"സമയത്ത് അടച്ച് ഞങ്ങൾക്ക് സ്ഥിരീകരണം അയയ്ക്കൂ."}],"TIMETABLE":[{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":18,"m":0,"t":"6:00 PM","c":"Class 1","s":"Quran & Duas","sm":"ഖുർആൻ & ദുആ","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":18,"m":0,"t":"6:00 PM","c":"Class 2","s":"Quran & Duas","sm":"ഖുർആൻ & ദുആ","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":19,"m":0,"t":"7:00 PM","c":"Class 3","s":"Tajweed & Fiqh","sm":"തജ്‌വീദ് & ഫിഖ്ഹ്","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":19,"m":0,"t":"7:00 PM","c":"Class 4","s":"Tajweed & Fiqh","sm":"തജ്‌വീദ് & ഫിഖ്ഹ്","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":19,"m":0,"t":"7:00 PM","c":"Class 5","s":"Tajweed & Fiqh","sm":"തജ്‌വീദ് & ഫിഖ്ഹ്","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":20,"m":0,"t":"8:00 PM","c":"Class 6","s":"Aqeeda & Hadith","sm":"അഖീദ & ഹദീസ്","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":20,"m":0,"t":"8:00 PM","c":"Class 7","s":"Aqeeda & Hadith","sm":"അഖീദ & ഹദീസ്","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":20,"m":0,"t":"8:00 PM","c":"Class 8","s":"Aqeeda & Hadith","sm":"അഖീദ & ഹദീസ്","l":"https://meet.google.com/"},{"days":[6],"lbl":"Saturday","lm":"ശനി","h":10,"m":0,"t":"10:00 AM","c":"Class 9","s":"Tafseer & History","sm":"തഫ്സീർ & ചരിത്രം","l":"https://meet.google.com/"},{"days":[6],"lbl":"Saturday","lm":"ശനി","h":10,"m":0,"t":"10:00 AM","c":"Class 10","s":"Tafseer & History","sm":"തഫ്സീർ & ചരിത്രം","l":"https://meet.google.com/"},{"days":[6],"lbl":"Saturday","lm":"ശനി","h":11,"m":30,"t":"11:30 AM","c":"Plus One","s":"Advanced Fiqh & Tafseer","sm":"ഉന്നത ഫിഖ്ഹ് & തഫ്സീർ","l":"https://meet.google.com/"},{"days":[6],"lbl":"Saturday","lm":"ശനി","h":11,"m":30,"t":"11:30 AM","c":"Plus Two","s":"Advanced Fiqh & Tafseer","sm":"ഉന്നത ഫിഖ്ഹ് & തഫ്സീർ","l":"https://meet.google.com/"}],"STUDENTS":{},"HOMEWORK":[{"id":"h1","c":"Class 1","t":"Practise the dua before eating","tm":"ഭക്ഷണത്തിന് മുമ്പുള്ള ദുആ പഠിക്കുക","d":"22 Oct"},{"id":"h2","c":"Class 3","t":"Revise Tajweed rules for the test","tm":"പരീക്ഷയ്ക്കായി തജ്‌വീദ് നിയമങ്ങൾ റിവിഷൻ ചെയ്യുക","d":"26 Oct"},{"id":"h3","c":"Class 6","t":"Write 5 Hadith with meaning","tm":"അർത്ഥസഹിതം 5 ഹദീസുകൾ എഴുതുക","d":"24 Oct"},{"id":"h4","c":"Class 9","t":"Read Seerah chapter 4","tm":"സീറ നാലാം അധ്യായം വായിക്കുക","d":"24 Oct"}],"MATERIALS":[{"t":"Daily Duas","tm":"ദൈനംദിന ദുആകൾ","c":"Class 1","u":"#"},{"t":"Tajweed Rules Notes","tm":"തജ്‌വീദ് നിയമങ്ങൾ","c":"Class 3","u":"#"},{"t":"Fiqh of Salah","tm":"നമസ്കാരത്തിന്റെ ഫിഖ്ഹ്","c":"Class 6","u":"#"},{"t":"Seerah Timeline","tm":"സീറ ടൈംലൈൻ","c":"Class 9","u":"#"}],"VIDEOS":[{"c":"Class 1","t":"Arabic letters, part 1","tm":"അറബി അക്ഷരങ്ങൾ – ഭാഗം 1","dur":"18 min","u":"#"},{"c":"Class 3","t":"Tajweed: Noon Sakin","tm":"തജ്‌വീദ്: നൂൻ സാകിൻ","dur":"22 min","u":"#"}],"FEES":[{"c":"Class 1","f":400},{"c":"Class 2","f":400},{"c":"Class 3","f":500},{"c":"Class 4","f":500},{"c":"Class 5","f":500},{"c":"Class 6","f":600},{"c":"Class 7","f":600},{"c":"Class 8","f":600},{"c":"Class 9","f":700},{"c":"Class 10","f":700},{"c":"Plus One","f":800},{"c":"Plus Two","f":800}]}</script>
+<main>
+
+<section id="home">
+<div class="hero"><div class="wrap hc">
+<div class="brand2"><span class="mk" role="img" aria-label="Thamheed Academy logo"></span><b>Thamheed Academy</b></div>
+<div class="slider" id="slider" role="group" aria-roledescription="carousel" aria-label="Academy posters"></div>
+<div class="dots" id="dots"></div>
+<div class="row"><button class="btn" data-go="apply">Apply for admission</button><button class="btn ghost" data-go="time">View timetable</button></div>
+</div></div>
+<div class="wrap up">
+<div class="card stats"><div><b>12</b><span>Classes</span></div><div><b>Live</b><span>Online classes</span></div><div><b>Daily</b><span>Attendance updates</span></div></div>
+<div id="greet"></div>
+<div id="pushc"></div>
+<div class="card next"><div class="ic" id="nxi"></div><div class="grow"><b id="nxt">Next class</b><div class="sub" id="nxs"></div></div><a class="btn sm" id="nxl" href="#" target="_blank" rel="noopener">Join</a></div>
+<h2 class="sec">Academics</h2>
+<div class="acad" id="acad"></div>
+<h2 class="sec">Select your class</h2>
+<div class="cgrid" id="classes"></div>
+<div class="card inst" id="inst" hidden><button class="x" id="instx" aria-label="Close">×</button><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M12 8v6m-3-3l3 3 3-3"/></svg></div><div class="grow"><b id="insttt"></b><div class="sub" id="instsub"></div></div><button class="btn sm" id="instgo" hidden></button></div>
+<div class="card" id="dua"></div>
+<div id="quiz"></div>
+<h2 class="sec">Notice board</h2>
+<div id="notes"></div>
+<h2 class="sec">How to join</h2>
+<div class="card"><ol class="steps">
+<li><b>Send your application</b><div class="sub">Fill in the short form. It takes one minute.</div></li>
+<li><b>We call you</b><div class="sub">We confirm the batch, timings and fees.</div></li>
+<li><b>Join a class</b><div class="sub">Tap the class link at the scheduled time.</div></li>
+</ol></div>
+<h2 class="sec">Monthly fees</h2><div class="card" id="fees"></div>
+<h2 class="sec">Questions parents ask</h2><div id="faq"></div>
+<h2 class="sec">Contact us</h2><div class="card two"><a class="btn full" id="call" href="#">Call us</a><a class="btn gold full" id="chat" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+</div>
+</section>
+
+<section id="cdet" hidden>
+<div class="pagehead"><div class="wrap"><div class="phrow"><button class="back" data-go="home" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6l-6 6 6 6"/></svg></button><div><h2 id="cdn"></h2><p id="cds"></p></div></div></div></div>
+<div class="wrap pull"><div class="tgrid" id="cbody"></div></div>
+</section>
+
+<section id="qz" hidden>
+<div class="pagehead"><div class="wrap"><div class="phrow"><button class="back" data-go="home" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6l-6 6 6 6"/></svg></button><div><h2>Quiz &amp; Tests</h2><p>Practise and test yourself</p></div></div></div></div>
+<div class="wrap pull"><div class="chips" id="qzf"></div><div id="qzb"></div></div>
+</section>
+
+<section id="apply" hidden>
+<div class="pagehead"><div class="wrap"><h2>Apply for admission</h2><p>We will reply on WhatsApp with batch timings and fees.</p></div></div>
+<div class="wrap pull"><div class="card">
+<label for="pn" style="margin-top:0">Parent’s name</label><input id="pn" autocomplete="name">
+<label for="cn">Child’s name</label><input id="cn">
+<label for="ca">Child’s age</label><input id="ca" type="number" min="4" max="18" inputmode="numeric">
+<label for="cl">Class</label><select id="cl"></select>
+<label for="ph">Parent’s WhatsApp number</label><input id="ph" type="tel" inputmode="tel" autocomplete="tel">
+<p class="err" id="err" role="alert"></p>
+<button class="btn gold full" id="send">Send application on WhatsApp</button>
+</div></div>
+</section>
+
+<section id="time" hidden>
+<div class="pagehead"><div class="wrap"><h2>Class timetable</h2><p>Tap Join when your class starts.</p></div></div>
+<div class="wrap pull"><div class="chips scroll" id="tf"></div><div id="tt"></div></div>
+</section>
+
+<section id="parent" hidden>
+<div class="pagehead"><div class="wrap"><h2>Parent portal</h2><p>See attendance, fees and results in one place.</p></div></div>
+<div class="wrap pull">
+<div class="card" id="idcard"><label for="sid" style="margin-top:0">Student ID</label><input id="sid" placeholder="Example: TA101" autocapitalize="characters" autocomplete="off">
+<p class="sub" style="margin:8px 0 0;font-size:.88rem">Demo IDs: TA101, TA102</p>
+<button class="btn full" id="look" style="margin-top:14px">View progress</button></div>
+<div id="rep"></div>
+</div>
+</section>
+
+<section id="mat" hidden>
+<div class="pagehead"><div class="wrap"><h2>Study materials</h2><p>Notes, homework and class recordings.</p></div></div>
+<div class="wrap pull"><div class="chips" id="sg"></div><div class="chips" id="mf"></div><div id="ml"></div></div>
+</section>
+
+<section id="admin" hidden>
+<div class="pagehead"><div class="wrap"><h2>Admin panel</h2><p>Edit the app, then publish. Parents see the update right away.</p></div></div>
+<div class="wrap pull"><div class="card"><button class="btn gold full" id="pub">Publish changes to parents</button><p class="pst" id="pst" role="status"></p><button class="btn sm ghost full" id="bak">Download a backup</button></div><div class="card" id="codesc"><h3>Parent login codes</h3>
+<p class="sub" style="margin:0 0 6px;font-size:.88rem">Tap “Send code” to open WhatsApp with the message ready. Codes appear after you tap Publish. If a parent’s WhatsApp number is saved in the student’s form, the chat opens directly.</p>
+<div id="codes"></div></div>
+<div class="card" id="pushadm"><h3>Send a notification</h3>
+<label for="pn_c">Send to</label><select id="pn_c"></select>
+<label for="pn_t">Title</label><input id="pn_t" placeholder="Holiday tomorrow">
+<label for="pn_b">Message</label><input id="pn_b" placeholder="No class on Friday. Classes resume on Monday.">
+<button class="btn gold full" id="pn_s" style="margin-top:14px">Send notification</button><p class="pst" id="pn_m" role="status"></p>
+<p class="sub" style="margin:6px 0 0;font-size:.88rem">Parents who turned on notifications get it on their phone right away. To keep it on the notice board too, also add it under Notices.</p></div>
+<div class="card" id="setc"><h3>Contact numbers</h3>
+<label for="s_wa">WhatsApp number</label><input id="s_wa" type="tel" inputmode="tel" placeholder="98765 43210">
+<label for="s_ph">Call number</label><input id="s_ph" type="tel" inputmode="tel" placeholder="98765 43210">
+<label for="s_upi">UPI ID for fee payments</label><input id="s_upi" placeholder="academy@upi" autocapitalize="off">
+<label for="s_upn">Name shown when paying</label><input id="s_upn" placeholder="Thamheed Academy">
+<p class="sub" style="margin:10px 0 0;font-size:.88rem">Used for the WhatsApp button, admission and fee messages, and the Call button. Type a 10-digit number (91 is added) or a full number with country code. Tap “Publish changes to parents” to save.</p></div>
+<div id="adm"></div></div>
+</section>
+<section id="cv" hidden>
+<div class="pagehead"><div class="wrap cvh"><button class="back" id="cvb" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button><div><h2 id="cvt"></h2><p id="cvs"></p></div></div></div>
+<div class="wrap pull"><div id="cvbody"></div></div>
+</section>
+</main>
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7zM9 9c0 3 3 6 6 6l1-2-2-1-1 1c-1-.4-2-1.400-2.500-2.500l1-1-1-2z"/></svg></a>
+<nav class="bar" aria-label="Main">
+<button data-go="home" aria-selected="true"></button>
+<button data-go="apply" aria-selected="false"></button>
+<button data-go="time" aria-selected="false"></button>
+<button data-go="parent" aria-selected="false"></button>
+<button data-go="mat" aria-selected="false"></button>
+<button data-go="admin" class="adm" aria-selected="false"></button>
+</nav>
+<script>
+/* ===== POSTERS: to change a poster, replace its src (a data: image) or add/remove lines. Order = slide order. ===== */
+var SLIDE_SECONDS=4;
+var POSTERS=[
+  {alt:"Madrasa padanam – admission continues, Thamheed Academy",src:"poster-1.jpg"},
+  {alt:"Online madrasa tuition – course highlights",src:"poster-2.jpg"},
+  {alt:"Thamheed madrasa tuition – admission open",src:"poster-3.jpg"}
+];
 </script>
+<script>
+// ===== EDIT THESE: your real details =====
+var WHATSAPP="918547476228"; // WhatsApp number: country code + number, no + or spaces
+var PHONE="918304882237"; // call number
+var CLASSES=[{"n":"Class 1","d":"Quran reading basics, daily duas, Arabic letters","m":"ഖുർആൻ വായനയുടെ അടിസ്ഥാനം, ദൈനംദിന ദുആകൾ, അറബി അക്ഷരങ്ങൾ"},{"n":"Class 2","d":"Quran reading basics, daily duas, Arabic letters","m":"ഖുർആൻ വായനയുടെ അടിസ്ഥാനം, ദൈനംദിന ദുആകൾ, അറബി അക്ഷരങ്ങൾ"},{"n":"Class 3","d":"Tajweed, Fiqh basics, Seerah stories, Akhlaq","m":"തജ്‌വീദ്, ഫിഖ്ഹ് അടിസ്ഥാനങ്ങൾ, സീറ കഥകൾ, അഖ്‌ലാഖ്"},{"n":"Class 4","d":"Tajweed, Fiqh basics, Seerah stories, Akhlaq","m":"തജ്‌വീദ്, ഫിഖ്ഹ് അടിസ്ഥാനങ്ങൾ, സീറ കഥകൾ, അഖ്‌ലാഖ്"},{"n":"Class 5","d":"Tajweed, Fiqh basics, Seerah stories, Akhlaq","m":"തജ്‌വീദ്, ഫിഖ്ഹ് അടിസ്ഥാനങ്ങൾ, സീറ കഥകൾ, അഖ്‌ലാഖ്"},{"n":"Class 6","d":"Aqeeda, Fiqh, Hadith, Arabic grammar","m":"അഖീദ, ഫിഖ്ഹ്, ഹദീസ്, അറബി വ്യാകരണം"},{"n":"Class 7","d":"Aqeeda, Fiqh, Hadith, Arabic grammar","m":"അഖീദ, ഫിഖ്ഹ്, ഹദീസ്, അറബി വ്യാകരണം"},{"n":"Class 8","d":"Aqeeda, Fiqh, Hadith, Arabic grammar","m":"അഖീദ, ഫിഖ്ഹ്, ഹദീസ്, അറബി വ്യാകരണം"},{"n":"Class 9","d":"Advanced Fiqh, Tafseer, Islamic history","m":"ഉന്നത ഫിഖ്ഹ്, തഫ്സീർ, ഇസ്ലാമിക ചരിത്രം"},{"n":"Class 10","d":"Advanced Fiqh, Tafseer, Islamic history","m":"ഉന്നത ഫിഖ്ഹ്, തഫ്സീർ, ഇസ്ലാമിക ചരിത്രം"},{"n":"Plus One","d":"Higher Islamic studies: Tafseer, Fiqh and Hadith","m":"ഉന്നത ഇസ്ലാമിക പഠനം: തഫ്സീർ, ഫിഖ്ഹ്, ഹദീസ്"},{"n":"Plus Two","d":"Higher Islamic studies: Tafseer, Fiqh and Hadith","m":"ഉന്നത ഇസ്ലാമിക പഠനം: തഫ്സീർ, ഫിഖ്ഹ്, ഹദീസ്"}];
+// days: 0=Sun … 6=Sat; h/m = start time (24h)
+var TIMETABLE=[{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":18,"m":0,"t":"6:00 PM","c":"Class 1","s":"Quran & Duas","sm":"ഖുർആൻ & ദുആ","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":18,"m":0,"t":"6:00 PM","c":"Class 2","s":"Quran & Duas","sm":"ഖുർആൻ & ദുആ","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":19,"m":0,"t":"7:00 PM","c":"Class 3","s":"Tajweed & Fiqh","sm":"തജ്‌വീദ് & ഫിഖ്ഹ്","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":19,"m":0,"t":"7:00 PM","c":"Class 4","s":"Tajweed & Fiqh","sm":"തജ്‌വീദ് & ഫിഖ്ഹ്","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":19,"m":0,"t":"7:00 PM","c":"Class 5","s":"Tajweed & Fiqh","sm":"തജ്‌വീദ് & ഫിഖ്ഹ്","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":20,"m":0,"t":"8:00 PM","c":"Class 6","s":"Aqeeda & Hadith","sm":"അഖീദ & ഹദീസ്","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":20,"m":0,"t":"8:00 PM","c":"Class 7","s":"Aqeeda & Hadith","sm":"അഖീദ & ഹദീസ്","l":"https://meet.google.com/"},{"days":[1,2,3,4,5],"lbl":"Mon–Fri","lm":"തിങ്കൾ–വെള്ളി","h":20,"m":0,"t":"8:00 PM","c":"Class 8","s":"Aqeeda & Hadith","sm":"അഖീദ & ഹദീസ്","l":"https://meet.google.com/"},{"days":[6],"lbl":"Saturday","lm":"ശനി","h":10,"m":0,"t":"10:00 AM","c":"Class 9","s":"Tafseer & History","sm":"തഫ്സീർ & ചരിത്രം","l":"https://meet.google.com/"},{"days":[6],"lbl":"Saturday","lm":"ശനി","h":10,"m":0,"t":"10:00 AM","c":"Class 10","s":"Tafseer & History","sm":"തഫ്സീർ & ചരിത്രം","l":"https://meet.google.com/"},{"days":[6],"lbl":"Saturday","lm":"ശനി","h":11,"m":30,"t":"11:30 AM","c":"Plus One","s":"Advanced Fiqh & Tafseer","sm":"ഉന്നത ഫിഖ്ഹ് & തഫ്സീർ","l":"https://meet.google.com/"},{"days":[6],"lbl":"Saturday","lm":"ശനി","h":11,"m":30,"t":"11:30 AM","c":"Plus Two","s":"Advanced Fiqh & Tafseer","sm":"ഉന്നത ഫിഖ്ഹ് & തഫ്സീർ","l":"https://meet.google.com/"}];
+// kind: Important | Holiday | Fees
+var NOTICES=[
+ {k:"Important",d:"20 Oct",t:"Monthly test on 28 Oct",tm:"ഒക്ടോബർ 28-ന് പ്രതിമാസ പരീക്ഷ",b:"Fiqh and Tajweed. Please revise your notes before the test.",bm:"ഫിഖ്ഹ്, തജ്‌വീദ് പരീക്ഷ. പരീക്ഷയ്ക്ക് മുമ്പ് നോട്ടുകൾ റിവിഷൻ ചെയ്യൂ."},
+ {k:"Holiday",d:"19 Oct",t:"No class on Friday, 23 Oct",tm:"23 ഒക്ടോബർ വെള്ളിയാഴ്ച ക്ലാസ് ഉണ്ടായിരിക്കില്ല",b:"Classes resume on Monday as usual.",bm:"തിങ്കളാഴ്ച മുതൽ പതിവുപോലെ ക്ലാസുകൾ."},
+ {k:"Fees",d:"15 Oct",t:"November fee due by 5 Nov",tm:"നവംബർ ഫീസ് നവംബർ 5-നകം അടയ്ക്കണം",b:"Please pay on time and send us a confirmation.",bm:"സമയത്ത് അടച്ച് ഞങ്ങൾക്ക് സ്ഥിരീകരണം അയയ്ക്കൂ."}
+];
+var STUDENTS={};
+// PDF notes: paste a Google Drive share link ("Anyone with the link") in u
+var MATERIALS=[{"t":"Daily Duas","tm":"ദൈനംദിന ദുആകൾ","c":"Class 1","u":"#"},{"t":"Tajweed Rules Notes","tm":"തജ്‌വീദ് നിയമങ്ങൾ","c":"Class 3","u":"#"},{"t":"Fiqh of Salah","tm":"നമസ്കാരത്തിന്റെ ഫിഖ്ഹ്","c":"Class 6","u":"#"},{"t":"Seerah Timeline","tm":"സീറ ടൈംലൈൻ","c":"Class 9","u":"#"}];
+var PHONE_NOTE=1;
+var AUDIO=[{"c":"Class 1","t":"Daily Duas – listen and repeat","tm":"ദൈനംദിന ദുആകൾ – കേട്ട് ആവർത്തിക്കൂ","dur":"8 min","u":"#"},{"c":"Class 3","t":"Surah Al-Fil with Tajweed","tm":"സൂറത്തുൽ ഫീൽ – തജ്‌വീദ് സഹിതം","dur":"6 min","u":"#"}];
+var MODELS=[{"t":"Model Paper – Term 1","tm":"മോഡൽ ചോദ്യപേപ്പർ – ടേം 1","c":"Class 5","u":"#"},{"t":"Model Paper – Fiqh","tm":"മോഡൽ ചോദ്യപേപ്പർ – ഫിഖ്ഹ്","c":"Class 8","u":"#"}];
+var QUIZ=[{"id":"q1","t":"Chapter Quiz: Cleanliness","tm":"അധ്യായ ക്വിസ്: ശുചിത്വം","c":"Class 3","k":"Chapter quiz","qs":[["Which of these is needed before Salah?","Wudu","Eating","Sleeping","Playing","A"],["How many Fard prayers do we pray daily?","3","5","7","2","B"],["We should begin eating with…","Bismillah","Shouting","Running","Nothing","A"]]},{"id":"q2","t":"Monthly Test: Manners (Adab)","tm":"മാസ പരീക്ഷ: ആദാബ്","c":"Class 5","k":"Monthly test","qs":[["We greet a Muslim with…","As-salamu alaykum","Silence","Goodbye","Nothing","A"],["Speaking the truth is…","Optional","A good habit","Not needed","Only for adults","B"],["We should respect our…","Parents and teachers","Nobody","Only friends","Only guests","A"]]}];
+var UPI="",UPN="Thamheed Academy";
+var FEES=[{"c":"Class 1","f":400},{"c":"Class 2","f":400},{"c":"Class 3","f":500},{"c":"Class 4","f":500},{"c":"Class 5","f":500},{"c":"Class 6","f":600},{"c":"Class 7","f":600},{"c":"Class 8","f":600},{"c":"Class 9","f":700},{"c":"Class 10","f":700},{"c":"Plus One","f":800},{"c":"Plus Two","f":800}];
+var FAQ=[
+ {q:"What do we need for online classes?",qm:"ഓൺലൈൻ ക്ലാസിന് എന്തെല്ലാം വേണം?",a:"A phone, tablet or computer with internet and the Google Meet app. A quiet place helps your child focus.",am:"ഇന്റർനെറ്റ് ഉള്ള ഫോൺ, ടാബ്‌ലെറ്റ് അല്ലെങ്കിൽ കമ്പ്യൂട്ടർ, Google Meet ആപ്പ്. ശാന്തമായ ഒരിടം കുട്ടിയെ ശ്രദ്ധിക്കാൻ സഹായിക്കും."},
+ {q:"How long is each class?",qm:"ഓരോ ക്ലാസും എത്ര സമയം?",a:"Class 1–8: 45 minutes, Monday to Friday. Class 9 and above: 90 minutes on Saturday.",am:"ക്ലാസ് 1–8: തിങ്കൾ മുതൽ വെള്ളി വരെ 45 മിനിറ്റ്. ക്ലാസ് 9 മുതൽ മുകളിലേക്ക്: ശനിയാഴ്ച 90 മിനിറ്റ്."},
+ {q:"Can my child try a class first?",qm:"ആദ്യം ഒരു ട്രയൽ ക്ലാസ് കിട്ടുമോ?",a:"Yes. Send an application and we will arrange a trial class.",am:"കിട്ടും. അപേക്ഷ അയച്ചാൽ ഞങ്ങൾ ട്രയൽ ക്ലാസ് ഏർപ്പാടാക്കും."},
+ {q:"How do I pay the fee?",qm:"ഫീസ് എങ്ങനെ അടയ്ക്കാം?",a:"Pay by UPI or bank transfer, then send the confirmation to us on WhatsApp.",am:"UPI അല്ലെങ്കിൽ ബാങ്ക് ട്രാൻസ്ഫർ വഴി അടച്ച്, സ്ഥിരീകരണം WhatsApp-ൽ അയയ്ക്കൂ."}
+];
+var DUAS=[
+ {a:"رَبِّ زِدْنِي عِلْمًا",t:"Dua for knowledge",tm:"അറിവിനുള്ള ദുആ",e:"My Lord, increase me in knowledge.",m:"എന്റെ റബ്ബേ, എന്റെ അറിവ് വർധിപ്പിക്കേണമേ."},
+ {a:"بِسْمِ اللَّهِ",t:"Before eating",tm:"ഭക്ഷണത്തിന് മുമ്പ്",e:"In the name of Allah.",m:"അല്ലാഹുവിന്റെ നാമത്തിൽ."},
+ {a:"الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ",t:"After eating",tm:"ഭക്ഷണത്തിന് ശേഷം",e:"All praise is for Allah who fed us, gave us drink and made us Muslims.",m:"ഞങ്ങളെ ഭക്ഷിപ്പിക്കുകയും കുടിപ്പിക്കുകയും മുസ്ലിംകളാക്കുകയും ചെയ്ത അല്ലാഹുവിന് സർവ്വസ്തുതിയും."},
+ {a:"بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",t:"Before sleeping",tm:"ഉറങ്ങുന്നതിന് മുമ്പ്",e:"In Your name, O Allah, I die and I live.",m:"അല്ലാഹുവേ, നിന്റെ നാമത്തിൽ ഞാൻ മരിക്കുകയും ജീവിക്കുകയും ചെയ്യുന്നു."},
+ {a:"بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ",t:"Leaving home",tm:"വീട്ടിൽ നിന്ന് ഇറങ്ങുമ്പോൾ",e:"In the name of Allah, I trust in Allah.",m:"അല്ലാഹുവിന്റെ നാമത്തിൽ, ഞാൻ അല്ലാഹുവിൽ ഭരമേൽപ്പിച്ചിരിക്കുന്നു."}
+];
+var HOMEWORK=[{"id":"h1","c":"Class 1","t":"Practise the dua before eating","tm":"ഭക്ഷണത്തിന് മുമ്പുള്ള ദുആ പഠിക്കുക","d":"22 Oct"},{"id":"h2","c":"Class 3","t":"Revise Tajweed rules for the test","tm":"പരീക്ഷയ്ക്കായി തജ്‌വീദ് നിയമങ്ങൾ റിവിഷൻ ചെയ്യുക","d":"26 Oct"},{"id":"h3","c":"Class 6","t":"Write 5 Hadith with meaning","tm":"അർത്ഥസഹിതം 5 ഹദീസുകൾ എഴുതുക","d":"24 Oct"},{"id":"h4","c":"Class 9","t":"Read Seerah chapter 4","tm":"സീറ നാലാം അധ്യായം വായിക്കുക","d":"24 Oct"}];
+var VIDEOS=[{"c":"Class 1","t":"Arabic letters, part 1","tm":"അറബി അക്ഷരങ്ങൾ – ഭാഗം 1","dur":"18 min","u":"#"},{"c":"Class 3","t":"Tajweed: Noon Sakin","tm":"തജ്‌വീദ്: നൂൻ സാകിൻ","dur":"22 min","u":"#"}];
+var seg="notes";
+try{var XD=JSON.parse(document.getElementById("ta-data").textContent);for(var XK in XD)window[XK]=XD[XK]}catch(e){}
+// =========================================
+var DICT={
+"Learn. Grow. Succeed.":"പഠിക്കൂ. വളരൂ. വിജയിക്കൂ.",
+"Live online madrasa classes with caring teachers. Quran, Fiqh, Aqeeda and Akhlaq for children of every age.":"സ്നേഹമുള്ള അധ്യാപകരോടൊപ്പം തത്സമയ ഓൺലൈൻ മദ്റസ ക്ലാസുകൾ. എല്ലാ പ്രായത്തിലുമുള്ള കുട്ടികൾക്കും ഖുർആൻ, ഫിഖ്ഹ്, അഖീദ, അഖ്‌ലാഖ്.",
+"Apply for admission":"അഡ്മിഷന് അപേക്ഷിക്കൂ","View timetable":"ടൈംടേബിൾ കാണൂ","Class levels":"ക്ലാസ് തലങ്ങൾ","Online classes":"ഓൺലൈൻ ക്ലാസ്","Attendance updates":"ഹാജർ വിവരങ്ങൾ","Live":"ലൈവ്","Daily":"ദിവസവും","Join":"ചേരൂ",
+"Notice board":"അറിയിപ്പ് ബോർഡ്","Our classes":"ഞങ്ങളുടെ ക്ലാസുകൾ","How to join":"എങ്ങനെ ചേരാം",
+"Send your application":"അപേക്ഷ അയയ്ക്കൂ","Fill in the short form. It takes one minute.":"ചെറിയ ഫോം പൂരിപ്പിക്കൂ. ഒരു മിനിറ്റ് മതി.",
+"We call you":"ഞങ്ങൾ വിളിക്കും","We confirm the batch, timings and fees.":"ബാച്ച്, സമയം, ഫീസ് എന്നിവ ഞങ്ങൾ അറിയിക്കും.",
+"Join a class":"ക്ലാസിൽ ചേരൂ","Tap the class link at the scheduled time.":"നിശ്ചിത സമയത്ത് ക്ലാസ് ലിങ്കിൽ ടാപ്പ് ചെയ്യൂ.",
+"We will reply on WhatsApp with batch timings and fees.":"ബാച്ച് സമയവും ഫീസും ഞങ്ങൾ WhatsApp-ൽ അറിയിക്കും.",
+"Parent’s name":"രക്ഷിതാവിന്റെ പേര്","Child’s name":"കുട്ടിയുടെ പേര്","Child’s age":"കുട്ടിയുടെ പ്രായം","Class":"ക്ലാസ്","Parent’s WhatsApp number":"രക്ഷിതാവിന്റെ WhatsApp നമ്പർ",
+"Send application on WhatsApp":"WhatsApp-ൽ അപേക്ഷ അയയ്ക്കൂ",
+"Class timetable":"ക്ലാസ് ടൈംടേബിൾ","Tap Join when your class starts.":"ക്ലാസ് തുടങ്ങുമ്പോൾ ‘ചേരൂ’ ടാപ്പ് ചെയ്യൂ.",
+"Parent portal":"രക്ഷിതാക്കളുടെ പോർട്ടൽ","See attendance, fees and results in one place.":"ഹാജർ, ഫീസ്, പരീക്ഷാഫലം ഒരിടത്ത് കാണാം.",
+"Student ID":"സ്റ്റുഡന്റ് ഐഡി","View progress":"പുരോഗതി കാണൂ","Demo IDs: TA101, TA102":"ഡെമോ ഐഡികൾ: TA101, TA102",
+"Study materials":"പഠന സാമഗ്രികൾ","Notes and worksheets for each class.":"ഓരോ ക്ലാസിനുമുള്ള നോട്ടുകളും വർക്ക്ഷീറ്റുകളും.",
+"Home":"ഹോം","Apply":"അപേക്ഷ","Classes":"ക്ലാസ്","Parent":"രക്ഷിതാവ്","Notes":"നോട്ട്",
+"Today":"ഇന്ന്","Tomorrow":"നാളെ","Coming up":"വരാനിരിക്കുന്നത്","Remind":"ഓർമ്മിപ്പിക്കൂ","Share":"പങ്കിടൂ","Open PDF":"PDF തുറക്കൂ","All":"എല്ലാം","Link coming soon":"ലിങ്ക് ഉടൻ",
+"Attendance":"ഹാജർ","Fees":"ഫീസ്","Paid":"അടച്ചു","Due":"ബാക്കി","All paid":"എല്ലാം അടച്ചു","Exam results":"പരീക്ഷാഫലം","Average":"ശരാശരി",
+"Message academy about fees":"ഫീസിനെക്കുറിച്ച് സന്ദേശം അയയ്ക്കൂ","Important":"പ്രധാനം","Holiday":"അവധി",
+"Excellent":"മികച്ചത്","Good":"നല്ലത്","Needs support":"കൂടുതൽ ശ്രദ്ധ വേണം",
+"September":"സെപ്റ്റംബർ","October":"ഒക്ടോബർ","November":"നവംബർ",
+"Fiqh":"ഫിഖ്ഹ്","Tajweed":"തജ്‌വീദ്","Aqeeda":"അഖീദ","Quran":"ഖുർആൻ","Duas":"ദുആകൾ",
+"Please fill in every field before sending.":"അയയ്ക്കുന്നതിന് മുമ്പ് എല്ലാ ഫീൽഡുകളും പൂരിപ്പിക്കൂ.",
+"No student found with that ID. Check the ID and try again.":"ഈ ഐഡിയിൽ വിദ്യാർത്ഥിയെ കണ്ടെത്തിയില്ല. ഐഡി പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കൂ."
+};
+Object.assign(DICT,{"Notes, homework and class recordings.":"നോട്ടുകൾ, ഹോംവർക്ക്, ക്ലാസ് റെക്കോർഡിങ്ങുകൾ.","Homework":"ഹോംവർക്ക്","Videos":"വീഡിയോകൾ","Dua of the day":"ഇന്നത്തെ ദുആ","Monthly fees":"പ്രതിമാസ ഫീസ്","Questions parents ask":"രക്ഷിതാക്കളുടെ സംശയങ്ങൾ","Contact us":"ബന്ധപ്പെടൂ","Call us":"വിളിക്കൂ","Chat on WhatsApp":"WhatsApp-ൽ സംസാരിക്കൂ","Request leave on WhatsApp":"WhatsApp-ൽ അവധി അറിയിക്കൂ","Watch":"കാണൂ","Nothing here yet.":"ഇതുവരെ ഒന്നുമില്ല."});
+var LANG="en";try{LANG=localStorage.getItem("ta_lang")||"en"}catch(e){}
+function ML(){return LANG==="ml"}
+function TX(s){return ML()&&DICT[s]?DICT[s]:s}
+function P(en,m){return ML()&&m?m:en}
+function CN(n){return ML()?n.replace("Class","ക്ലാസ്").replace("Plus One","പ്ലസ് വൺ").replace("Plus Two","പ്ലസ് ടു"):n}
+function cnum(n){n=String(n).trim();var m=/^Class (\d+)(?:\s*[–-]\s*(\d+))?$/.exec(n);if(m)return[+m[1],+(m[2]||m[1])];if(/^Plus One$/i.test(n))return[11,11];if(/^Plus Two$/i.test(n))return[12,12];return null}
+function clsMatch(x,c){if(!c||c==="All"||x==="All"||x===c)return true;var a=cnum(x),b=cnum(c);return !!(a&&b&&a[0]<=b[1]&&b[0]<=a[1])}
+function myClasses(){var bar=document.querySelector(".bar");if(bar&&bar.classList.contains("isadm"))return[];var a=[];Object.keys(window.STUDENTS||{}).forEach(function(k){var c=STUDENTS[k]&&STUDENTS[k].cls;if(c&&a.indexOf(c)<0)a.push(c)});return a}
+function mineT(r){var mc=myClasses();return !mc.length||mc.some(function(c){return clsMatch(r.c,c)})}
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function wa(t,n){return "https://wa.me/"+(n||"")+"?text="+encodeURIComponent(t)}
+var IC={
+ home:'<path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/>',
+ apply:'<path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h6M9 17h6"/>',
+ time:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+ parent:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>',
+ mat:'<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2zM4 21V5M9 7h6"/>',
+ video:'<rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/>',
+   admin:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>',
+  bell:'<path d="M6 17V11a6 6 0 0112 0v6l2 2H4zM10 21a2 2 0 004 0"/>'
+};
+function svg(k){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+IC[k]+'</svg>'}
+var NAVL={home:"Home",apply:"Apply",time:"Classes",parent:"Parent",mat:"Notes",admin:"Admin"};
+document.querySelectorAll(".bar button").forEach(function(b){b.innerHTML=svg(b.dataset.go)+NAVL[b.dataset.go]});
+function go(id){
+ ["home","apply","time","parent","mat","admin","cdet","qz"].forEach(function(s){$(s).hidden=(s!==id)});
+ document.querySelectorAll(".bar button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.go===(id==="cdet"||id==="qz"?"home":id))});
+ window.scrollTo(0,0)}
+document.querySelectorAll("[data-go]").forEach(function(b){b.onclick=function(){go(b.dataset.go)}});
+function walk(){
+ var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n,a=[];
+ while(n=w.nextNode()){if(n.parentNode.tagName!=="SCRIPT")a.push(n)}
+ a.forEach(function(n){if(n.__o===undefined)n.__o=n.nodeValue;var k=n.__o.trim();if(!k)return;n.nodeValue=(ML()&&DICT[k])?n.__o.replace(k,DICT[k]):n.__o});
+ $("sid").placeholder=ML()?"ഉദാ: TA101":"Example: TA101";
+ $("lang").textContent=ML()?"English":"മലയാളം";
+ document.documentElement.lang=ML()?"ml":"en"}
+var matF="All",lastId=null,ttF="auto";
+function render(){
+ 
+ var cur=$("cl").value;
+ $("cl").innerHTML=CLASSES.map(function(c){return '<option value="'+esc(c.n)+'">'+esc(CN(c.n))+'</option>'}).join("");
+ if(cur)$("cl").value=cur;
+ var now=new Date(),today=now.getDay(),mins=now.getHours()*60+now.getMinutes();
+ var mc0=myClasses(),ttE=ttF==="auto"?(mc0.length?mc0[0]:"All"):ttF;
+ $("tf").innerHTML=["All"].concat(CLASSES.map(function(c){return c.n})).map(function(n){return '<button class="cb" data-tf="'+esc(n)+'" aria-pressed="'+(n===ttE)+'">'+esc(n==="All"?TX("All"):CN(n))+'</button>'}).join("");
+ document.querySelectorAll("[data-tf]").forEach(function(b){b.onclick=function(){ttF=b.dataset.tf;render()}});
+ $("tt").innerHTML=(TIMETABLE.filter(function(r){return clsMatch(r.c,ttE)}).length?TIMETABLE.filter(function(r){return clsMatch(r.c,ttE)}):[]).map(function(r){
+  var isT=r.days.indexOf(today)>-1;
+  var msg="⏰ Class reminder – Thamheed Academy\n"+r.c+" · "+r.s+"\nTime: "+r.t+"\nJoin: "+r.l;
+  return '<div class="card slot'+(isT?' today':'')+'"><div class="time">'+esc(r.t.split(" ")[0])+'<small>'+esc(r.t.split(" ")[1])+'</small></div><div class="grow"><b>'+esc(CN(r.c))+'</b> '+(isT?'<span class="chip g">Today</span>':'')+'<div class="sub">'+esc(P(r.s,r.sm)+" · "+P(r.lbl,r.lm))+'</div></div><div class="acts"><a class="btn sm" href="'+esc(r.l)+'" target="_blank" rel="noopener">Join</a><a class="btn sm ghost" href="'+esc(wa(msg))+'" target="_blank" rel="noopener">Remind</a></div></div>'}).join("");
+ var nx=null;
+ TIMETABLE.filter(mineT).forEach(function(r){for(var d=0;d<7;d++){var day=(today+d)%7;if(r.days.indexOf(day)<0)continue;var at=d*1440+r.h*60+r.m-mins;if(at>=-45&&(!nx||at<nx.at))nx={at:at,r:r,d:d}}});
+ $("nxi").innerHTML=svg("video");
+ if(nx){var dw=nx.d===0?"Today":nx.d===1?"Tomorrow":"Coming up";
+  $("nxt").textContent=CN(nx.r.c)+" · "+P(nx.r.s,nx.r.sm);
+  $("nxs").textContent=ML()?TX(dw)+" "+nx.r.t:dw+" at "+nx.r.t;$("nxl").href=nx.r.l}
+ $("notes").innerHTML=NOTICES.map(function(n){
+  var cl=n.k==="Important"?"chip d":n.k==="Holiday"?"chip g":"chip";
+  var msg="📢 Thamheed Academy\n"+n.t+"\n"+n.b;
+  return '<div class="card"><div class="nh"><span class="'+cl+'">'+esc(n.k)+'</span><span class="sub">'+esc(n.d)+'</span></div><h3>'+esc(P(n.t,n.tm))+'</h3><p class="sub" style="margin:0">'+esc(P(n.b,n.bm))+'</p><a class="btn sm ghost" style="margin-top:12px" href="'+esc(wa(msg))+'" target="_blank" rel="noopener">Share</a></div>'}).join("");
+ $("sg").innerHTML=[["notes","Notes"],["model","Model Papers"],["aud","Audio"],["hw","Homework"],["vid","Videos"]].map(function(s){return '<button class="cb" data-s="'+s[0]+'" aria-pressed="'+(s[0]===seg)+'">'+TX(s[1])+'</button>'}).join("");
+ $("mf").innerHTML=["All"].concat(CLASSES.map(function(c){return c.n})).map(function(n){return '<button class="cb" data-f="'+esc(n)+'" aria-pressed="'+(n===matF)+'">'+esc(n==="All"?TX("All"):CN(n))+'</button>'}).join("");
+ document.querySelectorAll("[data-s]").forEach(function(b){b.onclick=function(){seg=b.dataset.s;render()}});
+ document.querySelectorAll("[data-f]").forEach(function(b){b.onclick=function(){matF=b.dataset.f;render()}});
+ var HWD={};try{HWD=JSON.parse(localStorage.getItem("ta_hw")||"{}")}catch(e){}
+ var okc=function(x){return clsMatch(x.c,matF)},soon='<span class="chip g">Link coming soon</span>',out="";
+ if(seg==="model")out=taModel(okc);else if(seg==="aud")out=taAudio(okc);else if(seg==="notes")out=MATERIALS.filter(okc).map(function(m){var a=m.u&&m.u!=="#"?'<a class="btn sm" href="'+esc(m.u)+'" target="_blank" rel="noopener">Open PDF</a>':soon;return '<div class="card slot"><div class="ic">'+svg("mat")+'</div><div class="grow"><b>'+esc(P(m.t,m.tm))+'</b><div class="sub">'+esc(CN(m.c))+' · PDF</div></div>'+a+'</div>'}).join("");
+ else if(seg==="hw")out=HOMEWORK.filter(okc).map(function(h){var dn=HWD[h.id];return '<label class="card slot hw'+(dn?' done':'')+'"><input type="checkbox" data-h="'+h.id+'"'+(dn?' checked':'')+'><span class="grow"><b>'+esc(P(h.t,h.tm))+'</b><span class="sub" style="display:block">'+esc(CN(h.c)+" · "+P("Due "+h.d,"അവസാന തീയതി "+h.d))+'</span></span></label>'}).join("");
+ else out=VIDEOS.filter(okc).map(function(v){var a=v.u&&v.u!=="#"?'<a class="btn sm" href="'+esc(v.u)+'" target="_blank" rel="noopener">Watch</a>':soon;return '<div class="card slot"><div class="ic">'+svg("video")+'</div><div class="grow"><b>'+esc(P(v.t,v.tm))+'</b><div class="sub">'+esc(CN(v.c)+" · "+v.dur)+'</div></div>'+a+'</div>'}).join("");
+ $("ml").innerHTML=out||'<div class="card sub">Nothing here yet.</div>';
+ document.querySelectorAll("[data-h]").forEach(function(b){b.onchange=function(){HWD[b.dataset.h]=b.checked;try{localStorage.setItem("ta_hw",JSON.stringify(HWD))}catch(e){}render()}});
+ var DU=DUAS[Math.floor(Date.now()/864e5)%DUAS.length];
+ $("dua").innerHTML='<span class="chip g">Dua of the day</span><div class="ar2" lang="ar" dir="rtl">'+DU.a+'</div><b>'+esc(P(DU.t,DU.tm))+'</b><div class="sub">'+esc(P(DU.e,DU.m))+'</div>';
+ $("fees").innerHTML=FEES.map(function(c){return '<div class="fee"><b>'+esc(CN(c.c))+'</b><span>'+esc(P("₹"+c.f+" / month","₹"+c.f+" / മാസം"))+'</span></div>'}).join("");
+ $("faq").innerHTML=FAQ.map(function(q){return '<details class="card faq"><summary>'+esc(P(q.q,q.qm))+'</summary><p class="sub">'+esc(P(q.a,q.am))+'</p></details>'}).join("");
+ $("call").href="tel:+"+PHONE;$("chat").href=wa("Hello Thamheed Academy, I have a question.",WHATSAPP);
+ if(lastId)portal(lastId);
+ walk()}
+function portal(id){
+ var s=STUDENTS[id],r=$("rep");
+ if(!s){r.innerHTML='<div class="card" role="alert" style="color:var(--bad);font-weight:700">No student found with that ID. Check the ID and try again.</div>';walk();return}
+ var pc=Math.round(s.present/s.total*100),dues=s.paid.filter(function(f){return !f[2]}),due=dues.length;
+ var tot=s.exams.reduce(function(a,e){return a+e[3]},0),max=s.exams.reduce(function(a,e){return a+e[4]},0),avg=Math.round(tot/max*100);
+ var fm="Fee payment – Thamheed Academy\nStudent ID: "+id+"\nName: "+s.name+"\nMonths due: "+dues.map(function(f){return f[0]}).join(", ");
+ r.innerHTML='<div class="card"><h3 style="margin:0">'+esc(s.name)+'</h3><div class="sub">'+esc(CN(s.cls))+'</div></div>'+
+ '<div class="card slot"><div class="ring" style="--p:'+pc+'"><div>'+pc+'%</div></div><div class="grow"><h3>Attendance</h3><div class="sub">'+esc(P(s.present+" of "+s.total+" classes attended",s.present+"/"+s.total+" ക്ലാസുകളിൽ ഹാജരായി"))+'</div></div></div>'+
+ '<div class="card"><h3>Exam results <span class="chip '+(avg>=80?'':avg>=60?'g':'d')+'">'+esc(TX("Average")+" "+avg+"%")+'</span></h3>'+
+ s.exams.map(function(e){var p=e[3]/e[4]*100,g=p>=80?["Excellent",""]:p>=60?["Good"," g"]:["Needs support"," d"];
+  return '<div class="fee"><span><b>'+esc(TX(e[2]))+'</b><div class="sub">'+esc(P(e[0],e[1]))+'</div></span><span style="text-align:right"><b>'+e[3]+'/'+e[4]+'</b><br><span class="chip'+g[1]+'">'+g[0]+'</span></span></div>'}).join("")+'</div>'+
+ '<div class="card"><h3>Fees '+(due?'<span class="chip d">'+esc(P(due+" due",due+" ബാക്കി"))+'</span>':'<span class="chip">All paid</span>')+'</h3>'+
+ s.paid.map(function(f){return '<div class="fee"><span>'+f[0]+'<div class="sub">₹'+f[1]+'</div></span><span class="chip'+(f[2]?'':' d')+'">'+(f[2]?'Paid':'Due')+'</span></div>'}).join("")+
+ (due?'<a class="btn sm full" style="margin-top:14px" target="_blank" rel="noopener" href="'+esc(wa(fm,WHATSAPP))+'">Message academy about fees</a>':'')+'</div>'+
+ '<a class="btn sm ghost full" target="_blank" rel="noopener" href="'+esc(wa("Leave request – Thamheed Academy\nStudent ID: "+id+"\nName: "+s.name+"\nDate: \nReason: ",WHATSAPP))+'">Request leave on WhatsApp</a><button class="btn sm full rcbtn" data-id="'+esc(id)+'" style="margin-top:10px">Report card (A4)</button>';
+ walk()}
+$("look").onclick=function(){lastId=$("sid").value.trim().toUpperCase();portal(lastId)};
+$("send").onclick=function(){
+ var p=$("pn").value.trim(),c=$("cn").value.trim(),a=$("ca").value.trim(),ph=$("ph").value.trim();
+ if(!p||!c||!a||!ph){$("err").textContent=TX("Please fill in every field before sending.");return}
+ $("err").textContent="";
+ window.open(wa("Admission request – Thamheed Academy\nParent: "+p+"\nChild: "+c+"\nAge: "+a+"\nClass: "+$("cl").value+"\nPhone: "+ph,WHATSAPP),"_blank")};
+$("lang").onclick=function(){LANG=ML()?"en":"ml";try{localStorage.setItem("ta_lang",LANG)}catch(e){}$("err").textContent="";render()};
+render();
+
+
+(function(){
+ var s=$("slider"),dt=$("dots"),n=POSTERS.length,i=0,t=null,w=null;
+ s.innerHTML=POSTERS.map(function(p){return '<div class="slide"><img src="'+p.src+'" alt="'+esc(p.alt)+'" draggable="false"></div>'}).join("");
+ dt.innerHTML=POSTERS.map(function(p,k){return '<button aria-label="Poster '+(k+1)+'" data-k="'+k+'"></button>'}).join("");
+ var sl=s.children;
+ function mark(k){i=k;[].forEach.call(sl,function(e,j){e.classList.toggle("on",j===k)});[].forEach.call(dt.children,function(b,j){b.setAttribute("aria-current",j===k)})}
+ function go(k){k=(k+n)%n;var e=sl[k];if(!s.clientWidth)return;s.scrollTo({left:e.offsetLeft-(s.clientWidth-e.offsetWidth)/2,behavior:"smooth"})}
+ function cur(){var c=s.scrollLeft+s.clientWidth/2,b=0,d=1e9;[].forEach.call(sl,function(e,j){var m=Math.abs(e.offsetLeft+e.offsetWidth/2-c);if(m<d){d=m;b=j}});if(b!==i)mark(b)}
+ function stop(){clearInterval(t);clearTimeout(w)}
+ function play(){stop();if(n>1&&!matchMedia("(prefers-reduced-motion:reduce)").matches)t=setInterval(function(){go(i+1)},SLIDE_SECONDS*1000)}
+ s.addEventListener("scroll",function(){requestAnimationFrame(cur)},{passive:true});
+ ["touchstart","pointerdown","mouseenter"].forEach(function(ev){s.addEventListener(ev,stop,{passive:true})});
+ ["touchend","pointerup","pointercancel","mouseleave"].forEach(function(ev){s.addEventListener(ev,function(){stop();w=setTimeout(play,2500)},{passive:true})});
+ dt.onclick=function(e){var k=e.target.dataset.k;if(k!==undefined){go(+k);play()}};
+ document.addEventListener("visibilitychange",function(){document.hidden?stop():play()});
+ mark(0);play()})();
+
+(function(){
+var QZ=[
+{q:"How many pillars does Islam have?",qm:"ഇസ്‌ലാമിന്റെ അടിസ്ഥാന സ്തംഭങ്ങൾ എത്ര?",o:["4","5","6"],a:1},
+{q:"Which is the first surah of the Quran?",qm:"ഖുർആനിലെ ആദ്യത്തെ സൂറത്ത് ഏത്?",o:["Al-Baqarah","Al-Fatiha","Al-Ikhlas"],om:["അൽ-ബഖറ","അൽ-ഫാതിഹ","അൽ-ഇഖ്‌ലാസ്"],a:1},
+{q:"In which city was Prophet Muhammad ﷺ born?",qm:"നബി ﷺ ജനിച്ച നഗരം ഏത്?",o:["Makkah","Madinah","Taif"],om:["മക്ക","മദീന","ത്വായിഫ്"],a:0},
+{q:"How many surahs are in the Quran?",qm:"ഖുർആനിൽ എത്ര സൂറത്തുകൾ ഉണ്ട്?",o:["110","114","120"],a:1},
+{q:"In which month do Muslims fast?",qm:"മുസ്‌ലിംകൾ വ്രതം അനുഷ്ഠിക്കുന്ന മാസം ഏത്?",o:["Ramadan","Shawwal","Rajab"],om:["റമദാൻ","ശവ്വാൽ","റജബ്"],a:0}];
+var qi=0,sc=0,ans=-1,K=QZ.length;
+function quiz(){var el=$("quiz"),h;
+ if(qi>=K){h='<div class="card qz"><span class="chip g">'+P("Daily quiz","ഇന്നത്തെ ക്വിസ്")+'</span><h3>'+sc+' / '+K+'</h3><p class="sub">'+(sc>=4?P("Mashallah! Excellent work.","മാഷാ അല്ലാഹ്! മികച്ച പ്രകടനം."):P("Good try. Revise and play again.","നല്ല ശ്രമം. റിവിഷൻ ചെയ്ത് വീണ്ടും ശ്രമിക്കൂ."))+'</p><div class="row" style="margin-top:0"><button class="btn sm" data-q="r">'+P("Play again","വീണ്ടും കളിക്കൂ")+'</button><a class="btn sm ghost" target="_blank" rel="noopener" href="'+esc(wa("I scored "+sc+"/"+K+" in the Thamheed Academy quiz!"))+'">'+P("Share score","സ്കോർ പങ്കിടൂ")+'</a></div></div>'}
+ else{var q=QZ[qi];h='<div class="card qz"><div class="nh"><span class="chip g">'+P("Daily quiz","ഇന്നത്തെ ക്വിസ്")+'</span><span class="sub">'+(qi+1)+' / '+K+'</span></div><h3>'+esc(P(q.q,q.qm))+'</h3>'+q.o.map(function(o,k){var c=ans<0?"":k===q.a?" ok":k===ans?" bad":"";return '<button class="opt'+c+'" data-q="'+k+'"'+(ans>=0?' disabled':'')+'>'+esc(ML()&&q.om?q.om[k]:o)+'</button>'}).join("")+(ans>=0?'<button class="btn sm full" data-q="n" style="margin-top:6px">'+(qi===K-1?P("See score","സ്കോർ കാണൂ"):P("Next question","അടുത്ത ചോദ്യം"))+'</button>':'')+'</div>'}
+ el.innerHTML=h}
+$("quiz").onclick=function(e){var b=e.target.closest("[data-q]");if(!b)return;var v=b.dataset.q;
+ if(v==="r"){qi=0;sc=0;ans=-1}else if(v==="n"){qi++;ans=-1}else if(ans<0){ans=+v;if(ans===QZ[qi].a)sc++}quiz()};
+function greet(){var n=new Date(),hj="",L=ML()?"ml-IN":"en-IN";
+ try{hj=new Intl.DateTimeFormat(L+"-u-ca-islamic-umalqura",{day:"numeric",month:"long",year:"numeric"}).format(n)}catch(e){}
+ $("greet").innerHTML='<div class="card greet"><div><b>'+P("Assalamu alaikum","അസ്സലാമു അലൈക്കും")+'</b><div class="sub">'+esc(n.toLocaleDateString(L,{weekday:"long",day:"numeric",month:"long"}))+'</div></div><div class="hj">'+esc(hj)+'</div></div>'}
+function tick(){var n=new Date(),td=n.getDay(),m=n.getHours()*60+n.getMinutes()+n.getSeconds()/60,b=null,el=$("nxs");
+ TIMETABLE.filter(mineT).forEach(function(r){for(var d=0;d<7;d++){if(r.days.indexOf((td+d)%7)<0)continue;var at=d*1440+r.h*60+r.m-m;if(at>=-45&&(b===null||at<b))b=at}});
+ if(b===null)return;
+ if(b<=0){el.textContent=P("Class is live now","ക്ലാസ് ഇപ്പോൾ നടക്കുന്നു");return}
+ var h=Math.floor(b/60),d=Math.floor(h/24);h%=24;
+ el.textContent=P("Starts in ","ആരംഭിക്കാൻ ")+(d?d+"d ":"")+(h?h+"h ":"")+Math.floor(b%60)+"m"}
+function pg(){if(seg!=="hw")return;var bx=[].slice.call(document.querySelectorAll("[data-h]"));if(!bx.length)return;
+ var d=bx.filter(function(b){return b.checked}).length;
+ $("ml").insertAdjacentHTML("afterbegin",'<div class="card pg"><b>'+P("Homework done: ","ഹോംവർക്ക് പൂർത്തിയായത്: ")+d+' / '+bx.length+'</b><div><i style="width:'+Math.round(d/bx.length*100)+'%"></i></div></div>')}
+var R0=render;
+render=function(){R0();greet();quiz();tick();pg();$("fab").href=wa("Hello Thamheed Academy, I have a question.",WHATSAPP)};
+function ap(t){if(t)document.documentElement.setAttribute("data-theme",t)}
+try{ap(localStorage.getItem("ta_theme"))}catch(e){}
+$("thm").onclick=function(){var t=document.documentElement.getAttribute("data-theme"),dk=t?t==="dark":matchMedia("(prefers-color-scheme:dark)").matches;t=dk?"light":"dark";ap(t);try{localStorage.setItem("ta_theme",t)}catch(e){}};
+setInterval(tick,20000);
+render()})();
+
+(function(){
+var KEYS=["NOTICES","TIMETABLE","STUDENTS","HOMEWORK","MATERIALS","MODELS","VIDEOS","AUDIO","QUIZ","FEES"],tab="NOTICES",A={};
+var SC={
+NOTICES:["Notices",[["k","Type: Important, Holiday or Fees"],["d","Date (e.g. 20 Oct)"],["t","Title"],["tm","Title in Malayalam"],["b","Details"],["bm","Details in Malayalam"]],{k:"Important",d:"",t:"",tm:"",b:"",bm:""}],
+TIMETABLE:["Timetable",[["c","Class"],["s","Subject"],["sm","Subject in Malayalam"],["t","Time, written like 7:00 PM"],["h","Start hour, 0 to 23",1],["m","Start minute",1],["days","Days: 0=Sun, 1=Mon … 6=Sat, comma separated",2],["lbl","Days label (e.g. Mon–Fri)"],["lm","Days label in Malayalam"],["l","Class link (Google Meet)"]],{days:[1,2,3,4,5],lbl:"Mon–Fri",lm:"തിങ്കൾ–വെള്ളി",h:18,m:0,t:"6:00 PM",c:"Class 1",s:"",sm:"",l:"https://meet.google.com/"}],
+STUDENTS:["Students",[["id","Student ID (e.g. TA103)"],["phone","Parent’s WhatsApp number (for your reference, optional)"],["code","Parent code. Leave blank to create one automatically. Give brothers and sisters the same code."],["name","Name"],["cls","Class"],["present","Classes attended",1],["total","Total classes",1],["hifz","Hifz: Juz memorised (0 to 30)",1],["joined","Joined on (YYYY-MM-DD), optional"]],{id:"",phone:"",code:"",name:"",cls:"Class 1",present:0,total:0,hifz:0,joined:"",paid:[],exams:[],quran:[],absent:[]}],
+HOMEWORK:["Homework",[["c","Class"],["t","Homework"],["tm","Homework in Malayalam"],["d","Due date (e.g. 24 Oct)"]],{id:"",c:"Class 1",t:"",tm:"",d:""}],
+MATERIALS:["Notes",[["t","Title"],["tm","Title in Malayalam"],["c","Class"],["u","PDF link (Google Drive share link)"]],{t:"",tm:"",c:"Class 1",u:"#"}],
+VIDEOS:["Videos",[["t","Title"],["tm","Title in Malayalam"],["c","Class"],["dur","Length (e.g. 18 min)"],["u","Video link"]],{c:"Class 1",t:"",tm:"",dur:"",u:"#"}],
+FEES:["Fees",[["c","Class"],["f","Monthly fee in ₹",1]],{c:"Class 1",f:500}],
+AUDIO:["Audio",[["t","Title"],["tm","Title in Malayalam"],["c","Class"],["dur","Length (e.g. 8 min)"],["u","Audio link (mp3 link or Google Drive share link)"]],{c:"Class 1",t:"",tm:"",dur:"",u:"#"}],
+MODELS:["Model Papers",[["t","Title"],["tm","Title in Malayalam"],["c","Class"],["u","PDF link (Google Drive share link)"]],{t:"",tm:"",c:"Class 1",u:"#"}],
+QUIZ:["Quizzes",[["t","Title"],["tm","Title in Malayalam"],["c","Class"],["k","Type: Chapter quiz or Monthly test"]],{id:"",t:"",tm:"",c:"Class 1",k:"Chapter quiz",qs:[]}]};
+function cl(x){return JSON.parse(JSON.stringify(x))}
+KEYS.forEach(function(k){A[k]=cl(window[k])});
+A.STUDENTS=Object.keys(STUDENTS).map(function(id){var s=cl(STUDENTS[id]);s.id=id;s.phone="";return s});
+function ref(p){var a=p.split("."),k=a.pop(),o=A;a.forEach(function(x){o=o[x]});return[o,k]}
+function fld(p,l,v,t){
+ if(/\.qs\.\d+\.5$/.test(p)){return'<label>'+esc(l)+'</label><select data-p="'+p+'">'+["A","B","C","D"].map(function(x){return'<option'+(String(v||"A").toUpperCase()===x?' selected':'')+'>'+x+'</option>'}).join("")+'</select>'}
+ if(/\.(c|cls)$/.test(p)){var o=CLASSES.map(function(c){return c.n});if(v&&o.indexOf(v)<0)o.unshift(v);return'<label>'+esc(l)+'</label><select data-p="'+p+'">'+o.map(function(x){return'<option'+(x===v?' selected':'')+'>'+esc(x)+'</option>'}).join("")+'</select>'}
+ return'<label>'+esc(l)+'</label><input data-p="'+p+'"'+(t===1?' type="number"':'')+' value="'+esc(v)+'">'}
+function subs(s,i){s.quran=s.quran||[];s.absent=s.absent||[];var b="STUDENTS."+i,h='<h3>Fee months</h3>';
+ s.paid.forEach(function(r,j){var q=b+".paid."+j;h+=fld(q+".0","Month",r[0])+fld(q+".1","Amount in ₹",r[1],1)+'<label class="chk"><input type="checkbox" data-c="'+q+'.2"'+(r[2]?' checked':'')+'> Paid</label><button class="btn sm ghost" data-del="'+q+'">Remove month</button>'});
+ h+='<br><button class="btn sm ghost" style="margin-top:10px" data-add="'+b+'.paid">Add month</button><h3>Exam results</h3>';
+ s.exams.forEach(function(r,j){var q=b+".exams."+j;h+=fld(q+".0","Exam name",r[0])+fld(q+".1","Exam name in Malayalam",r[1])+fld(q+".2","Subject",r[2])+fld(q+".3","Marks scored",r[3],1)+fld(q+".4","Out of",r[4],1)+'<button class="btn sm ghost" style="margin-top:10px" data-del="'+q+'">Remove exam</button>'});
+ h+='<br><button class="btn sm ghost" style="margin-top:10px" data-add="'+b+'.exams">Add exam</button><h3>Quran &amp; Hifz progress</h3>';
+ s.quran.forEach(function(r,j){var q=b+".quran."+j;h+=fld(q+".0","Portion (e.g. Juz 30 or Surah An-Naba)",r[0])+fld(q+".1","Status (Memorised, In progress, Revision)",r[1])+fld(q+".2","Note",r[2])+'<button class="btn sm ghost" style="margin-top:10px" data-del="'+q+'">Remove</button>'});
+ h+='<br><button class="btn sm ghost" style="margin-top:10px" data-add="'+b+'.quran">Add Quran portion</button><h3>Absent days</h3>';
+ s.absent.forEach(function(r,j){var q=b+".absent."+j;h+=fld(q+".0","Date (YYYY-MM-DD, e.g. 2026-10-14)",r[0])+fld(q+".1","Reason (optional)",r[1])+'<button class="btn sm ghost" style="margin-top:10px" data-del="'+q+'">Remove</button>'});
+ return h+'<br><button class="btn sm ghost" style="margin-top:10px" data-add="'+b+'.absent">Add absent day</button>'}
+function subsQ(t,i){t.qs=t.qs||[];var b="QUIZ."+i,h='<h3>Questions</h3>';
+ t.qs.forEach(function(r,j){var q=b+".qs."+j;h+='<h4 style="margin:14px 0 0">Question '+(j+1)+'</h4>'+fld(q+".0","Question",r[0])+fld(q+".1","Option A",r[1])+fld(q+".2","Option B",r[2])+fld(q+".3","Option C",r[3])+fld(q+".4","Option D",r[4])+fld(q+".5","Correct answer",r[5])+'<button class="btn sm ghost" style="margin-top:10px" data-del="'+q+'">Remove question</button>'});
+ return h+'<br><button class="btn sm ghost" style="margin-top:10px" data-add="'+b+'.qs">Add question</button>'}
+function ar(){var h='<div class="chips">'+KEYS.map(function(k){return'<button class="cb" data-t="'+k+'" aria-pressed="'+(k===tab)+'">'+SC[k][0]+'</button>'}).join("")+'</div>';
+ A[tab].forEach(function(it,i){h+='<div class="card">'+SC[tab][1].map(function(f){return fld(tab+"."+i+"."+f[0],f[1],f[2]===2?it[f[0]].join(","):it[f[0]],f[2])}).join("")+(tab==="STUDENTS"?subs(it,i):tab==="QUIZ"?subsQ(it,i):"")+'<button class="btn sm ghost full" style="margin-top:16px" data-del="'+tab+'.'+i+'">Delete this entry</button></div>'});
+ $("adm").innerHTML=h+'<button class="btn sm full" data-add="'+tab+'">Add new</button>'}
+var ad=$("adm");
+ad.addEventListener("input",function(e){var p=e.target.dataset.p;if(!p)return;var r=ref(p),v=e.target.value;
+ r[0][r[1]]=e.target.type==="number"?Number(v):r[1]==="days"?v.split(",").map(Number).filter(function(n){return n>=0&&n<=6}):v});
+ad.addEventListener("change",function(e){var p=e.target.dataset.c;if(p){var r=ref(p);r[0][r[1]]=e.target.checked?1:0}});
+ad.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var d=b.dataset,r;
+ if(d.t){tab=d.t}
+ else if(d.del){if(!confirm("Delete this?"))return;r=ref(d.del);r[0].splice(+r[1],1)}
+ else if(d.add){r=ref(d.add);var a=r[0][r[1]],t=SC[d.add]?cl(SC[d.add][2]):/paid$/.test(d.add)?["",0,0]:/quran$/.test(d.add)?["","",""]:/absent$/.test(d.add)?["",""]:/qs$/.test(d.add)?["","","","","","A"]:["","","",0,0];if(d.add==="HOMEWORK")t.id="h"+Date.now();if(d.add==="QUIZ")t.id="q"+Date.now();a.push(t)}
+ else return;ar()});
+function hs(n){return crypto.subtle.digest("SHA-256",new TextEncoder().encode("ta:"+n)).then(function(b){return[].map.call(new Uint8Array(b),function(x){return("0"+x.toString(16)).slice(-2)}).join("")})}
+async function data(){var o={};KEYS.forEach(function(k){o[k]=A[k]});o.STUDENTS={};o.WHATSAPP=WHATSAPP;o.PHONE=PHONE;
+ for(var i=0;i<A.STUDENTS.length;i++){var s=A.STUDENTS[i],id=String(s.id).trim().toUpperCase();if(!id)continue;var c=cl(s),d=String(c.phone||"").replace(/\D/g,"").slice(-10);
+  if(d.length===10)c.ph=await hs(d);delete c.phone;delete c.id;o.STUDENTS[id]=c}
+ return o}
+function st(m,bad){var e=$("pst");e.textContent=m;e.style.color=bad?"var(--bad)":"var(--ok)"}
+$("bak").onclick=function(){claude.use("downloads").then(function(d){if(!d){st("Backup is not available here.",1);return}return Promise.resolve(data()).then(function(o){return d.save({filename:"thamheed-data.json",data:JSON.stringify(o,null,1)})})}).catch(function(){})};
+$("pub").onclick=async function(){
+ st("Publishing…");
+ try{var json=JSON.stringify(await data()).replace(/</g,"\\u003c");var art=await claude.use("artifact");if(!art)throw{code:"na"};
+  var res=await fetch(location.href.split("#")[0],{cache:"no-store"}),src=await res.text(),re=/(<script id="ta-data" type="application\/json">)[\s\S]*?(<\/script>)/;
+  if(!/^\s*<!doctype/i.test(src)||!re.test(src))throw{code:"src"};
+  await art.publish(src.replace(re,function(m,a,b){return a+json+b}))}
+ catch(e){var c=e&&e.code;if(c==="conflict")return;
+  st(c==="not_writer"||c==="not_granted"?"Only the app owner can publish changes.":"Could not publish from this screen. Download a backup and send it to Claude.",1)}};
+window.TAA={
+ list:function(){var m={};A.STUDENTS.forEach(function(s){var c=String(s.code||"").toUpperCase().replace(/[^A-Z0-9]/g,"");if(c.length<6)return;var f=m[c]=m[c]||{code:c,names:[],phone:""};if(s.name)f.names.push(s.name);var p=String(s.phone||"").replace(/\D/g,"");if(p&&!f.phone)f.phone=p});return Object.keys(m).map(function(c){return m[c]})},
+ reload:function(S){KEYS.forEach(function(k){A[k]=cl(window[k])});A.STUDENTS=Object.keys(S).map(function(id){var s=cl(S[id]);s.id=id;return s});ar()},
+ collect:function(){var cfg={};["NOTICES","TIMETABLE","HOMEWORK","MATERIALS","MODELS","VIDEOS","AUDIO","QUIZ","FEES"].forEach(function(k){cfg[k]=A[k]});cfg.WHATSAPP=WHATSAPP;cfg.PHONE=PHONE;cfg.UPI=UPI;cfg.UPN=UPN;var fam={};
+  function gen(){var a="ABCDEFGHJKLMNPQRSTUVWXYZ23456789",b=new Uint8Array(8),s="";crypto.getRandomValues(b);for(var i=0;i<8;i++)s+=a[b[i]%32];return s}
+  A.STUDENTS.forEach(function(s){var id=String(s.id||"").trim().toUpperCase().replace(/[^A-Z0-9_-]/g,"");if(!id)return;var code=String(s.code||"").toUpperCase().replace(/[^A-Z0-9]/g,"");if(code.length<6)code=gen();s.code=code;
+   var c=cl(s);delete c.id;delete c.code;(fam[code]=fam[code]||{kids:{}}).kids[id]=c});
+  ar();return JSON.parse(JSON.stringify({cfg:cfg,families:fam}))}};
+ar()})();
+
+(function(){
+Object.assign(DICT,{"Welcome":"സ്വാഗതം","Enter the mobile number you gave at registration.":"രജിസ്ട്രേഷനിൽ നൽകിയ മൊബൈൽ നമ്പർ നൽകൂ.","Registered mobile number":"രജിസ്റ്റർ ചെയ്ത മൊബൈൽ നമ്പർ","Enter the app":"ആപ്പിലേക്ക് പ്രവേശിക്കൂ","Not registered yet? Apply on WhatsApp":"രജിസ്റ്റർ ചെയ്തിട്ടില്ലേ? WhatsApp-ൽ അപേക്ഷിക്കൂ","Log out":"ലോഗ് ഔട്ട്"});
+Object.assign(DICT,{"Enter the parent code the academy gave you.":"അക്കാദമി നൽകിയ രക്ഷിതാവിന്റെ കോഡ് നൽകൂ.","Parent code":"രക്ഷിതാവിന്റെ കോഡ്","Staff login":"സ്റ്റാഫ് ലോഗിൻ","Staff email":"സ്റ്റാഫ് ഇമെയിൽ","Password":"പാസ്‌വേഡ്","Staff sign in":"സ്റ്റാഫ് സൈൻ ഇൻ","Log out":"ലോഗ് ഔട്ട്","Get class reminders and notices on your phone":"ക്ലാസ് റിമൈൻഡറുകളും അറിയിപ്പുകളും ഫോണിൽ ലഭിക്കാൻ","Turn on notifications":"നോട്ടിഫിക്കേഷൻ ഓൺ ചെയ്യൂ","Notifications are on":"നോട്ടിഫിക്കേഷൻ ഓണാണ്","Notifications are blocked. Allow them in your phone or browser settings.":"നോട്ടിഫിക്കേഷൻ തടഞ്ഞിരിക്കുന്നു. ഫോണിന്റെ/ബ്രൗസറിന്റെ സെറ്റിങ്സിൽ അനുവദിക്കൂ.","On iPhone: tap Share, then Add to Home Screen, and open the app from there.":"iPhone-ൽ: Share അമർത്തി Add to Home Screen ചെയ്ത ശേഷം അവിടെ നിന്ന് ആപ്പ് തുറക്കൂ."});
+$("gwa").href=wa("Hello Thamheed Academy, I would like to apply for admission.",WHATSAPP);
+walk()})();
+(function(){
+ var a=$("s_wa"),p=$("s_ph");
+ function nn(v){v=String(v).replace(/\D/g,"");return v.length===10?"91"+v:v}
+ a.value=WHATSAPP;p.value=PHONE;
+ function ap(){var x=nn(a.value),y=nn(p.value);if(x.length>=11)WHATSAPP=x;if(y.length>=11)PHONE=y;render();$("gwa").href=wa("Hello Thamheed Academy, I would like to apply for admission.",WHATSAPP)}
+ a.addEventListener("input",ap);p.addEventListener("input",ap)})();
+Object.assign(DICT,{"Report card (A4)":"റിപ്പോർട്ട് കാർഡ് (A4)","Close":"അടയ്ക്കുക","Print / Save as PDF":"പ്രിന്റ് / PDF സേവ് ചെയ്യുക","Send on WhatsApp":"WhatsApp-ൽ അയയ്ക്കൂ"});
+function openRC(id){
+ var s=STUDENTS[id];if(!s)return;
+ var tot=s.exams.reduce(function(a,e){return a+e[3]},0),max=s.exams.reduce(function(a,e){return a+e[4]},0),avg=Math.round(tot/max*100),pc=Math.round(s.present/s.total*100);
+ var gr=function(p){return p>=80?"Excellent":p>=60?"Good":"Needs support"};
+ var L=function(a,b){return esc(P(a,b))};
+ var rem=avg>=80?L("Excellent performance. Keep it up, in shaa Allah.","മികച്ച പ്രകടനം. ഇൻ ഷാ അല്ലാഹ് ഇത് തുടരട്ടെ."):avg>=60?L("Good progress. A little more daily revision will help.","നല്ല പുരോഗതി. ദിവസവും അൽപ്പം കൂടി റിവിഷൻ ചെയ്താൽ മെച്ചപ്പെടും."):L("Needs more support. Please follow up with daily revision at home.","കൂടുതൽ ശ്രദ്ധ ആവശ്യമാണ്. വീട്ടിൽ ദിവസവും റിവിഷൻ ഉറപ്പാക്കൂ.");
+ var d=new Date().toLocaleDateString(ML()?"ml-IN":"en-GB",{day:"numeric",month:"long",year:"numeric"});
+ var rows=s.exams.map(function(e,k){var p=Math.round(e[3]/e[4]*100);return '<tr><td>'+(k+1)+'</td><td>'+esc(TX(e[2]))+'</td><td>'+esc(P(e[0],e[1]))+'</td><td>'+e[3]+'</td><td>'+e[4]+'</td><td>'+p+'%</td><td>'+esc(TX(gr(p)))+'</td></tr>'}).join("");
+ var msg="📄 Progress Report – Thamheed Academy\n"+s.name+" ("+id+")\n"+s.cls+"\nAverage: "+avg+"%\n"+s.exams.map(function(e){return e[2]+": "+e[3]+"/"+e[4]}).join("\n")+"\nAttendance: "+pc+"%";
+ var sc=Math.min(1,(window.innerWidth-24)/794);
+ var el=document.getElementById("rc");if(!el){el=document.createElement("div");el.id="rc";document.body.appendChild(el)}
+ el.className="rcw";
+ var sheet='<div class="sh"><div class="shl"><span class="mk"></span><div><b class="shn">Thamheed Academy</b><div class="shs">ONLINE MADRASA TUITION</div></div></div><div class="shr"><b>'+L("PROGRESS REPORT","പുരോഗതി റിപ്പോർട്ട്")+'</b><div>'+esc(d)+'</div></div></div>'+
+ '<div class="info"><div><small>'+L("Student name","വിദ്യാർത്ഥിയുടെ പേര്")+'</small><b>'+esc(s.name)+'</b></div><div><small>'+L("Student ID","സ്റ്റുഡന്റ് ഐഡി")+'</small><b>'+esc(id)+'</b></div><div><small>'+L("Class","ക്ലാസ്")+'</small><b>'+esc(CN(s.cls))+'</b></div></div>'+
+ '<h4>'+L("Exam results","പരീക്ഷാഫലം")+'</h4><table><thead><tr><th>#</th><th>'+L("Subject","വിഷയം")+'</th><th>'+L("Test","പരീക്ഷ")+'</th><th>'+L("Marks","മാർക്ക്")+'</th><th>'+L("Out of","ആകെ")+'</th><th>%</th><th>'+L("Grade","ഗ്രേഡ്")+'</th></tr></thead><tbody>'+rows+'<tr class="tt"><td colspan="3">'+L("Total","ആകെ")+'</td><td>'+tot+'</td><td>'+max+'</td><td>'+avg+'%</td><td>'+esc(TX(gr(avg)))+'</td></tr></tbody></table>'+
+ '<div class="two2"><div class="bx"><small>'+L("Attendance","ഹാജർ")+'</small><b>'+pc+'%</b><span>'+s.present+' / '+s.total+' '+L("classes","ക്ലാസുകൾ")+'</span></div><div class="bx"><small>'+L("Overall result","ആകെ ഫലം")+'</small><b>'+avg+'%</b><span>'+esc(TX(gr(avg)))+'</span></div></div>'+
+ '<h4>'+L("Teacher’s remarks","അധ്യാപകന്റെ അഭിപ്രായം")+'</h4><div class="rm">'+rem+'</div>'+
+ '<div class="sig"><div>'+L("Class teacher","ക്ലാസ് അധ്യാപകൻ")+'</div><div>'+L("Principal","പ്രിൻസിപ്പൽ")+'</div><div>'+L("Parent signature","രക്ഷിതാവിന്റെ ഒപ്പ്")+'</div></div>'+
+ '<div class="ft">Thamheed Academy · 8304 882 237 · 8547 476 228</div>';
+ el.innerHTML='<div class="rcb"><button class="btn sm gold" id="rcx">Close</button><button class="btn sm" id="rcp">Print / Save as PDF</button><a class="btn sm gold" target="_blank" rel="noopener" href="'+esc(wa(msg))+'">Send on WhatsApp</a></div><p class="rch">'+L("Tip: tap Print, choose “Save as PDF”, then attach the PDF in WhatsApp.","ടിപ്പ്: പ്രിന്റ് ടാപ്പ് ചെയ്ത് “Save as PDF” തിരഞ്ഞെടുക്കൂ, എന്നിട്ട് PDF WhatsApp-ൽ അറ്റാച്ച് ചെയ്യൂ.")+'</p><div class="sw" style="width:'+Math.round(794*sc)+'px;height:'+Math.round(1123*sc)+'px"><div class="sheet" style="transform:scale('+sc+')">'+sheet+'</div></div>';
+ $("rcx").onclick=function(){el.remove()};
+ $("rcp").onclick=function(){try{window.print()}catch(x){}};
+ el.scrollTop=0;walk()}
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".rcbtn");if(b)openRC(b.dataset.id)});
+
+(function(){
+ var dp=null,ua=navigator.userAgent,ios=/iPhone|iPad|iPod/i.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1),and=/Android/i.test(ua),K="ta_inst_x";
+ var st=(window.matchMedia&&matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true;
+ function snoozed(){try{var t=+localStorage.getItem(K);return !!t&&Date.now()-t<12096e5}catch(e){return false}}
+ function draw(){
+  var c=document.getElementById("inst");if(!c)return;
+  if(st||snoozed()||!(ios||and||dp)){c.hidden=true;return}
+  var m=ML(),s;
+  if(dp)s=m?"ഹോം സ്ക്രീനിൽ നിന്ന് മറ്റ് ആപ്പുകൾ പോലെ തുറക്കാം.":"Open it from your home screen, like any other app.";
+  else if(ios)s=m?"Share ബട്ടൺ അമർത്തി “Add to Home Screen” തിരഞ്ഞെടുക്കൂ. നോട്ടിഫിക്കേഷൻ ഹോം സ്ക്രീൻ ആപ്പിൽ നിന്ന് മാത്രമേ വരൂ.":"Tap the Share button, then “Add to Home Screen”. Notifications only work from the home-screen app.";
+  else s=m?"ബ്രൗസറിന്റെ മുകളിലെ ⋮ അമർത്തി “Install app” അല്ലെങ്കിൽ “Add to Home screen” തിരഞ്ഞെടുക്കൂ.":"Tap the ⋮ menu at the top of the browser, then “Install app” or “Add to Home screen”.";
+  document.getElementById("insttt").textContent=m?"ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യൂ":"Install the app";
+  document.getElementById("instsub").textContent=s;
+  var b=document.getElementById("instgo");b.hidden=!dp;b.textContent=m?"ഇൻസ്റ്റാൾ":"Install";
+  c.hidden=false}
+ window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();dp=e;draw()});
+ window.addEventListener("appinstalled",function(){dp=null;st=true;draw()});
+ document.getElementById("instgo").onclick=function(){if(!dp)return;dp.prompt();dp.userChoice.then(function(r){if(r&&r.outcome==="accepted")st=true;dp=null;draw()})};
+ document.getElementById("instx").onclick=function(){try{localStorage.setItem(K,String(Date.now()))}catch(e){}draw()};
+ var R0=render;render=function(){R0();draw()};
+ if("serviceWorker" in navigator&&location.protocol==="https:")window.addEventListener("load",function(){navigator.serviceWorker.register("/firebase-messaging-sw.js").catch(function(){})});
+ draw()})();
+
+(function(){
+ IC.aud='<path d="M4 15v-3a8 8 0 0116 0v3M4 15h3v5H5a1 1 0 01-1-1zm16 0h-3v5h2a1 1 0 001-1z"/>';IC.q='<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 115 0c0 1.5-2.5 2-2.5 4M12 17v.01"/>';
+ IC.hw='<path d="M8 3h8l1 2h3v16H4V5h3zM8 12h8M8 16h5"/>';IC.fee='<rect x="3" y="6" width="18" height="12" rx="3"/><circle cx="12" cy="12" r="2.5"/>';IC.res='<path d="M5 20V10m7 10V4m7 16v-7"/>';IC.chev='<path d="M9 6l6 6-6 6"/>';
+ Object.assign(DICT,{"Academics":"പഠനം","Select your class":"ക്ലാസ് തിരഞ്ഞെടുക്കൂ","Class Videos":"ക്ലാസ് വീഡിയോകൾ","Watch recorded classes":"റെക്കോർഡ് ചെയ്ത ക്ലാസുകൾ കാണൂ","Timetable":"ടൈംടേബിൾ","Study Notes":"പഠന നോട്ടുകൾ","Results":"പരീക്ഷാഫലം","Admission":"അഡ്മിഷൻ"});
+ var curC=null;
+ function sn(n){var m=/^Class (\d+)$/.exec(n);return m?m[1]:n==="Plus One"?"+1":n==="Plus Two"?"+2":n}
+ function tile(ac,ic,col,label,sub){return '<button class="tile" data-ac="'+ac+'"><span class="cir c'+col+'">'+svg(ic)+'</span><b>'+esc(label)+'</b>'+(sub?'<small>'+esc(sub)+'</small>':'')+'</button>'}
+ function go2(ac,cls){
+  var p=ac.split(":");
+  if(p[0]==="fees"){go("home");var f=$("fees");if(f)f.scrollIntoView({behavior:"smooth",block:"center"});return}
+  if(p[0]==="notices"){go("home");var nb=$("notes");if(nb)nb.scrollIntoView({behavior:"smooth",block:"start"});return}
+  if(p[0]==="att"||p[0]==="hifz"){render();go("parent");setTimeout(function(){var e=document.querySelector(p[0]==="att"?".calcard":".hifzc");if(e)e.scrollIntoView({behavior:"smooth",block:"start"})},200);return}
+  if(p[0]==="qz")qzF=cls||"auto";
+  if(p[0]==="time")ttF=cls||"auto";
+  if(p[0]==="mat"){seg=p[1]||"notes";matF=cls||"All"}
+  render();go(p[0])}
+ function fillClass(){
+  var n=curC;if(!n)return;
+  var cd=CLASSES.filter(function(c){return c.n===n})[0],ok=function(x){return clsMatch(x.c,n)};
+  $("cdn").textContent=CN(n);$("cds").textContent=cd?P(cd.d,cd.m):"";
+  function ct(k,en,ml){var sg={classes:"class",notes:"note",tasks:"task",videos:"video",papers:"paper",tracks:"track",tests:"test"};return k?P(k+" "+(k===1?sg[en]:en),k+" "+ml):P("Nothing yet","ഇതുവരെ ഒന്നുമില്ല")}
+  var f=FEES.filter(function(x){return x.c===n})[0];
+  $("cbody").innerHTML=tile("time","time",1,TX("Timetable"),ct(TIMETABLE.filter(ok).length,"classes","ക്ലാസുകൾ"))+tile("mat:notes","mat",2,TX("Study Notes"),ct(MATERIALS.filter(ok).length,"notes","നോട്ടുകൾ"))+tile("mat:hw","hw",3,TX("Homework"),ct(HOMEWORK.filter(ok).length,"tasks","ഹോംവർക്ക്"))+tile("mat:model","apply",5,TX("Model Papers"),ct(MODELS.filter(ok).length,"papers","പേപ്പറുകൾ"))+tile("mat:vid","video",4,TX("Videos"),ct(VIDEOS.filter(ok).length,"videos","വീഡിയോകൾ"))+tile("mat:aud","aud",2,TX("Audio"),ct(AUDIO.filter(ok).length,"tracks","ഓഡിയോകൾ"))+tile("qz","q",3,TX("Quiz & Tests"),ct(QUIZ.filter(ok).length,"tests","ടെസ്റ്റുകൾ"))+
+   (f?'<div class="card feec"><div><small>'+esc(P("Monthly fee","പ്രതിമാസ ഫീസ്"))+'</small></div><b>₹'+esc(f.f)+'</b></div>':'');
+  $("cbody").querySelectorAll("[data-ac]").forEach(function(b){b.onclick=function(){go2(b.dataset.ac,n)}})}
+ function drawAcad(){
+  var a=$("acad");if(!a)return;
+  a.innerHTML='<button class="wide" data-ac="mat:aud"><span class="sq">'+svg("aud")+'</span><span class="tx"><b>'+esc(TX("Audio Lessons"))+'</b><small>'+esc(TX("Listen & learn on the go"))+'</small></span><span class="chv">'+svg("chev")+'</span></button>'+
+   tile("mat:vid","video",4,TX("Class Videos"))+tile("mat:notes","mat",2,TX("Study Notes"))+tile("mat:model","apply",1,TX("Model Papers"))+tile("qz","q",3,TX("Quiz & Tests"))+tile("mat:hw","hw",3,TX("Homework"))+tile("time","time",1,TX("Timetable"))+tile("att","time",2,TX("Attendance"))+tile("hifz","mat",5,TX("Quran & Hifz"))+tile("parent","res",4,TX("Results"))+tile("fees","fee",5,TX("Fees"))+tile("notices","bell",3,TX("Notices"))+tile("apply","apply",1,TX("Admission"));
+  a.querySelectorAll("[data-ac]").forEach(function(b){b.onclick=function(){go2(b.dataset.ac)}});
+  var mc=myClasses();
+  $("classes").innerHTML=CLASSES.map(function(c){return '<button class="ctile'+(mc.indexOf(c.n)>-1?' mine':'')+'" data-cls="'+esc(c.n)+'" aria-label="'+esc(CN(c.n))+'">'+esc(sn(c.n))+'</button>'}).join("");
+  $("classes").querySelectorAll("[data-cls]").forEach(function(b){b.onclick=function(){curC=b.dataset.cls;fillClass();go("cdet")}});
+  if(curC&&!$("cdet").hidden)fillClass()}
+ var R3=render;render=function(){R3();drawAcad()};
+ var G3=go;go=function(id){G3(id);if(id==="home")drawAcad()};
+ drawAcad()})();
+
+/* ===== audio, model papers, quiz, attendance calendar, Quran/Hifz, UPI ===== */
+var qzF="auto",qzRun=null,taOff={};
+IC.aud='<path d="M4 15v-3a8 8 0 0116 0v3M4 15h3v5H5a1 1 0 01-1-1zm16 0h-3v5h2a1 1 0 001-1z"/>';
+IC.q='<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 115 0c0 1.5-2.5 2-2.5 4M12 17v.01"/>';
+Object.assign(DICT,{"Model Papers":"മോഡൽ ചോദ്യപേപ്പറുകൾ","Audio":"ഓഡിയോ","Audio Lessons":"ഓഡിയോ പാഠങ്ങൾ","Listen & learn on the go":"യാത്രയിലും കേട്ട് പഠിക്കൂ","Quiz & Tests":"ക്വിസ് & ടെസ്റ്റ്","Practise and test yourself":"പരിശീലിക്കൂ, സ്വയം പരീക്ഷിക്കൂ","Quran & Hifz":"ഖുർആൻ & ഹിഫ്ള്","Notices":"അറിയിപ്പുകൾ","Open":"തുറക്കൂ","Chapter quiz":"അധ്യായ ക്വിസ്","Monthly test":"മാസ പരീക്ഷ","Start":"തുടങ്ങൂ","Coming soon":"ഉടൻ വരുന്നു","Next":"അടുത്തത്","See result":"ഫലം കാണൂ","Try again":"വീണ്ടും ശ്രമിക്കൂ","Send result on WhatsApp":"ഫലം WhatsApp-ൽ അയയ്ക്കൂ","Back to tests":"ടെസ്റ്റുകളിലേക്ക്","Wrong answers":"തെറ്റിയ ഉത്തരങ്ങൾ","Copy UPI ID":"UPI ഐഡി കോപ്പി ചെയ്യൂ","Copied":"കോപ്പി ചെയ്തു","Juz memorised":"മനഃപാഠമാക്കിയ ജുസ്അ്","Attendance calendar":"ഹാജർ കലണ്ടർ"});
+function taDrive(u){var m=/drive\.google\.com\/file\/d\/([^\/?#]+)/.exec(u||"");return m?"https://drive.google.com/uc?export=download&id="+m[1]:(u||"")}
+function taAudio(ok){return AUDIO.filter(ok).map(function(a){var has=a.u&&a.u!=="#";
+ return '<div class="card aud"><div class="slot"><div class="ic">'+svg("aud")+'</div><div class="grow"><b>'+esc(P(a.t,a.tm))+'</b><div class="sub">'+esc(CN(a.c)+(a.dur?" · "+a.dur:""))+'</div></div>'+(has?'<a class="btn sm ghost" href="'+esc(a.u)+'" target="_blank" rel="noopener">Open</a>':'<span class="chip g">Link coming soon</span>')+'</div>'+(has?'<audio controls preload="none" src="'+esc(taDrive(a.u))+'"></audio>':'')+'</div>'}).join("")}
+function taModel(ok){return MODELS.filter(ok).map(function(m){var a=m.u&&m.u!=="#"?'<a class="btn sm" href="'+esc(m.u)+'" target="_blank" rel="noopener">Open PDF</a>':'<span class="chip g">Link coming soon</span>';return '<div class="card slot"><div class="ic">'+svg("apply")+'</div><div class="grow"><b>'+esc(P(m.t,m.tm))+'</b><div class="sub">'+esc(CN(m.c))+' · PDF</div></div>'+a+'</div>'}).join("")}
+/* ---- quiz ---- */
+function taBest(){try{return JSON.parse(localStorage.getItem("ta_qz")||"{}")}catch(e){return{}}}
+function qzDraw(){
+ var box=$("qzb");if(!box)return;
+ var mc=myClasses(),filt=qzF==="auto"?(mc[0]||"All"):qzF;
+ $("qzf").innerHTML=qzRun?"":["All"].concat(CLASSES.map(function(c){return c.n})).map(function(n){return '<button class="cb" data-qf="'+esc(n)+'" aria-pressed="'+(n===filt)+'">'+esc(n==="All"?TX("All"):CN(n))+'</button>'}).join("");
+ if(qzRun){qzRunDraw(box);walk();return}
+ var best=taBest(),L=QUIZ.filter(function(t){return clsMatch(t.c,filt)});
+ box.innerHTML=L.length?L.map(function(t){var n=(t.qs||[]).length,b=best[t.id];
+  return '<div class="card"><div class="nh"><span class="chip g">'+esc(TX(t.k||"Chapter quiz"))+'</span><span class="sub">'+esc(CN(t.c))+'</span></div><h3>'+esc(P(t.t,t.tm))+'</h3><p class="sub" style="margin:0 0 12px">'+esc(P(n+" questions",n+" ചോദ്യങ്ങൾ")+(b!==undefined?" · "+P("Best","മികച്ചത്")+": "+b+"/"+n:""))+'</p>'+(n?'<button class="btn sm" data-qs="'+esc(t.id)+'">'+esc(TX("Start"))+'</button>':'<span class="chip g">'+esc(TX("Coming soon"))+'</span>')+'</div>'}).join(""):'<div class="card sub">'+esc(TX("Nothing here yet."))+'</div>';
+ walk()}
+function qzRunDraw(box){
+ var r=qzRun,t=r.t,qs=t.qs||[],n=qs.length;
+ if(r.i>=n){
+  var p=n?Math.round(r.sc/n*100):0,best=taBest();if(!(best[t.id]>=r.sc)){best[t.id]=r.sc;try{localStorage.setItem("ta_qz",JSON.stringify(best))}catch(e){}}
+  var ks=Object.keys(STUDENTS),nm=ks.length&&STUDENTS[ks[0]]?STUDENTS[ks[0]].name:"";
+  var msg="📝 "+t.t+" – Thamheed Academy\n"+(nm?"Name: "+nm+"\n":"")+"Score: "+r.sc+"/"+n+" ("+p+"%)";
+  box.innerHTML='<div class="card" style="text-align:center"><h3>'+esc(P(t.t,t.tm))+'</h3><div class="ring" style="--p:'+p+';margin:14px auto"><div>'+p+'%</div></div><b style="font-size:1.3rem">'+r.sc+' / '+n+'</b></div>'+
+   (r.wrong.length?'<div class="card"><h3>'+esc(TX("Wrong answers"))+'</h3>'+r.wrong.map(function(w){return '<div class="fee" style="display:block"><b>'+esc(w.q)+'</b><div class="sub">✗ '+esc(w.your)+'</div><div class="sub" style="color:var(--ok)">✓ '+esc(w.right)+'</div></div>'}).join("")+'</div>':'')+
+   '<button class="btn full" data-qagain="1">'+esc(TX("Try again"))+'</button><a class="btn ghost full" style="margin-top:10px" target="_blank" rel="noopener" href="'+esc(wa(msg))+'">'+esc(TX("Send result on WhatsApp"))+'</a><button class="btn ghost full" style="margin-top:10px" data-qback="1">'+esc(TX("Back to tests"))+'</button>';
+  return}
+ var row=qs[r.i],ans="ABCD".indexOf(String(row[5]||"A").trim().toUpperCase()),reveal=r.sel!==null&&String(t.k||"").toLowerCase().indexOf("monthly")<0;
+ var opts=[1,2,3,4].map(function(j){var tx=row[j];if(!tx)return"";var k=j-1,c="opt";if(r.sel!==null){if(reveal){if(k===ans)c+=" ok";else if(k===r.sel)c+=" no"}else if(k===r.sel)c+=" sel"}
+  return '<button class="'+c+'" data-qo="'+k+'"'+(r.sel!==null?' disabled':'')+'>'+"ABCD"[k]+'. '+esc(tx)+'</button>'}).join("");
+ box.innerHTML='<div class="card"><div class="qbar"><i style="width:'+Math.round(r.i/n*100)+'%"></i></div><div class="sub" style="margin-bottom:6px">'+esc(P("Question "+(r.i+1)+" of "+n,"ചോദ്യം "+(r.i+1)+" / "+n))+'</div><h3 style="margin-bottom:14px">'+esc(row[0])+'</h3>'+opts+(r.sel!==null?'<button class="btn full" data-qnext="1" style="margin-top:6px">'+esc(r.i+1>=n?TX("See result"):TX("Next"))+'</button>':'')+'</div>'}
+function qzPick(k){var r=qzRun,row=r.t.qs[r.i],ans="ABCD".indexOf(String(row[5]||"A").trim().toUpperCase());
+ if(k===ans)r.sc++;else r.wrong.push({q:row[0],your:row[1+k],right:row[1+ans]});r.sel=k;qzDraw()}
+/* ---- attendance calendar ---- */
+function taPad(n){return(n<10?"0":"")+n}
+function taYmd(d){return d.getFullYear()+"-"+taPad(d.getMonth()+1)+"-"+taPad(d.getDate())}
+function taCal(id){
+ var s=STUDENTS[id];if(!s)return"";
+ var off=taOff[id]||0,now=new Date(),first=new Date(now.getFullYear(),now.getMonth()+off,1),y=first.getFullYear(),m=first.getMonth(),days=new Date(y,m+1,0).getDate();
+ var cd={};TIMETABLE.forEach(function(r){if(clsMatch(r.c,s.cls))(r.days||[]).forEach(function(d){cd[d]=1})});if(!Object.keys(cd).length)[1,2,3,4,5].forEach(function(d){cd[d]=1});
+ var ab={};(s.absent||[]).forEach(function(r){ab[String(r[0]).trim()]=r[1]||""});
+ var today=taYmd(now),start=s.joined||taYmd(new Date(now.getTime()-60*864e5)),p=0,a=0,cells="";
+ for(var i=0;i<first.getDay();i++)cells+="<i></i>";
+ for(var d=1;d<=days;d++){var dt=new Date(y,m,d),k=taYmd(dt),c="n";
+  if(k>today)c="f";else if(!cd[dt.getDay()]||k<start)c="n";else if(ab[k]!==undefined){c="a";a++}else{c="p";p++}
+  if(k===today)c+=" t";cells+='<b class="cd '+c+'">'+d+'</b>'}
+ var wk=ML()?["ഞാ","തി","ചൊ","ബു","വ്യാ","വെ","ശ"]:["S","M","T","W","T","F","S"];
+ var title=first.toLocaleDateString(ML()?"ml-IN":"en-GB",{month:"long",year:"numeric"});
+ return '<div class="card calcard"><div class="calh"><button class="calnav" data-calnav="-1" data-id="'+esc(id)+'" aria-label="Previous month">‹</button><h3>'+esc(title)+'</h3><button class="calnav" data-calnav="1" data-id="'+esc(id)+'" aria-label="Next month"'+(off>=0?' disabled':'')+'>›</button></div><div class="cal">'+wk.map(function(x){return '<span class="wk">'+x+'</span>'}).join("")+cells+'</div><div class="leg"><span><b class="cd p"></b>'+esc(P("Present","ഹാജർ"))+' '+p+'</span><span><b class="cd a"></b>'+esc(P("Absent","ഹാജരില്ല"))+' '+a+'</span></div></div>'}
+function taHifz(s){
+ var rows=s.quran||[],j=Number(s.hifz)||0;if(!j&&!rows.length)return"";
+ var h='<div class="card hifzc"><h3>'+esc(TX("Quran & Hifz"))+'</h3>';
+ if(j)h+='<div class="sub">'+esc(TX("Juz memorised"))+'</div><div class="hbar"><i style="width:'+Math.min(100,Math.round(j/30*100))+'%"></i></div><b>'+j+' / 30</b>';
+ rows.forEach(function(r){var st=String(r[1]||""),c=/memor|done|complete|ഹിഫ്/i.test(st)?"":" g";h+='<div class="fee"><span><b>'+esc(r[0]||"")+'</b>'+(r[2]?'<div class="sub">'+esc(r[2])+'</div>':'')+'</span><span class="chip'+c+'">'+esc(st)+'</span></div>'});
+ return h+'</div>'}
+function taExtras(id){
+ var s=STUDENTS[id],r=$("rep");if(!s||!r)return;
+ var cards=[].slice.call(r.children),head=function(c){var h=c.querySelector("h3");return h?h.textContent.trim():""};
+ var att=cards.filter(function(c){return c.querySelector(".ring")})[0];if(att)att.insertAdjacentHTML("afterend",taCal(id));
+ var ex=cards.filter(function(c){return /^(Exam results|പരീക്ഷാഫലം)/.test(head(c))})[0],hf=taHifz(s);if(ex&&hf)ex.insertAdjacentHTML("afterend",hf);
+ var dues=(s.paid||[]).filter(function(f){return !f[2]}),tot=dues.reduce(function(a,f){return a+(Number(f[1])||0)},0);
+ var fe=cards.filter(function(c){return /^(Fees|ഫീസ്)/.test(head(c))})[0];
+ if(fe&&tot>0&&UPI){var link="upi://pay?pa="+encodeURIComponent(UPI)+"&pn="+encodeURIComponent(UPN)+"&am="+tot+"&cu=INR&tn="+encodeURIComponent("Fee "+id);
+  fe.insertAdjacentHTML("beforeend",'<div style="margin-top:14px"><a class="btn full" href="'+esc(link)+'">'+esc(P("Pay ₹"+tot+" with UPI","UPI വഴി ₹"+tot+" അടയ്ക്കൂ"))+'</a><button class="btn sm ghost full" style="margin-top:8px" data-upicopy="'+esc(UPI)+'">'+esc(TX("Copy UPI ID"))+'</button><p class="sub" style="margin:8px 0 0;font-size:.85rem">'+esc(P("After paying, tap “Message academy about fees” and send the screenshot.","അടച്ച ശേഷം “Message academy about fees” അമർത്തി സ്ക്രീൻഷോട്ട് അയയ്ക്കൂ."))+'</p></div>')}
+ walk()}
+var taP0=portal;portal=function(id){taP0(id);taExtras(id)};
+var taR0=render;render=function(){taR0();if($("qz")&&!$("qz").hidden)qzDraw()};
+var taG0=go;go=function(id){taG0(id);if(id==="qz")qzDraw()};
+document.addEventListener("click",function(e){
+ var b=e.target.closest&&e.target.closest("button,a");if(!b)return;var d=b.dataset;
+ if(d.qf!==undefined){qzF=d.qf;qzDraw()}
+ else if(d.qs!==undefined){var t=QUIZ.filter(function(x){return String(x.id)===d.qs})[0];if(t){qzRun={t:t,i:0,sc:0,sel:null,wrong:[]};qzDraw();window.scrollTo(0,0)}}
+ else if(d.qo!==undefined&&qzRun&&qzRun.sel===null)qzPick(+d.qo);
+ else if(d.qnext!==undefined&&qzRun){qzRun.i++;qzRun.sel=null;qzDraw();window.scrollTo(0,0)}
+ else if(d.qagain!==undefined&&qzRun){qzRun={t:qzRun.t,i:0,sc:0,sel:null,wrong:[]};qzDraw();window.scrollTo(0,0)}
+ else if(d.qback!==undefined){qzRun=null;qzDraw()}
+ else if(d.calnav!==undefined){var id=d.id,o=(taOff[id]||0)+Number(d.calnav);if(o>0)o=0;if(o<-24)o=-24;taOff[id]=o;var card=b.closest(".calcard");if(card)card.outerHTML=taCal(id);walk()}
+ else if(d.upicopy!==undefined){try{navigator.clipboard.writeText(d.upicopy);b.textContent=TX("Copied")}catch(x){}}
+});
+["s_upi","s_upn"].forEach(function(i){var el=$(i);if(!el)return;el.value=(i==="s_upi"?UPI:UPN)||"";el.addEventListener("input",function(){if(i==="s_upi")UPI=el.value.trim();else UPN=el.value.trim()||"Thamheed Academy";render()})});
+</script>
+<script type="module">
+/* Firebase settings now live in config.js (small file next to index.html) */
+const FIREBASE_CONFIG=(self.TA_CONFIG||{}).firebase||{apiKey:"YOUR_API_KEY"};
+/* Firebase console > Project settings > Cloud Messaging > Web Push certificates > Generate key pair */
+const VAPID_KEY=(self.TA_CONFIG||{}).vapidKey||""; /* optional: Firebase uses its default key when empty */
+/* ========================================================================================================= */
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import {getFirestore,doc,collection,getDoc,getDocs,setDoc,addDoc,deleteDoc} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import {getMessaging,getToken,onMessage,isSupported} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-messaging.js";
+const W=window,$=function(i){return document.getElementById(i)};
+const ok=!FIREBASE_CONFIG.apiKey.startsWith("YOUR_");
+const T=function(en,ml){return W.ML()?ml:en};
+const say=function(t){$("gerr").textContent=t};
+let app,auth,db,MY=[];
+if(ok){app=initializeApp(FIREBASE_CONFIG);auth=getAuth(app);db=getFirestore(app)}
+Object.assign(W.DICT,{"This code is not valid. Check it, or ask the academy.":"ഈ കോഡ് ശരിയല്ല. പരിശോധിക്കൂ, അല്ലെങ്കിൽ അക്കാദമിയോട് ചോദിക്കൂ."});
+function unlock(){$("gate").hidden=true;document.body.classList.remove("gated")}
+function toast(t){const e=document.createElement("div");e.className="toast";e.textContent=t;document.body.appendChild(e);setTimeout(function(){e.remove()},7000)}
+async function loadCfg(){
+ try{const s=await getDoc(doc(db,"config","app"));if(!s.exists())return;const d=s.data();for(const k in d)W[k]=d[k];
+  $("s_wa").value=W.WHATSAPP;$("s_ph").value=W.PHONE;if($("s_upi")){$("s_upi").value=W.UPI||"";$("s_upn").value=W.UPN||""}
+  $("gwa").href=W.wa("Hello Thamheed Academy, I would like to apply for admission.",W.WHATSAPP);W.render()}catch(e){console.warn(e)}}
+async function allKids(){const o={};(await getDocs(collection(db,"families"))).forEach(function(d){const k=d.data().kids||{};for(const id in k)o[id]=Object.assign({},k[id],{code:d.id})});return o}
+const P1=W.portal;
+W.portal=function(id){
+ if(MY.length>1&&id===MY[0]){let h="";MY.forEach(function(x){P1(x);h+=$("rep").innerHTML});$("rep").innerHTML=h;W.walk()}else P1(id)};
+function enter(S){
+ W.STUDENTS=S;MY=Object.keys(S);W.render();
+ if(MY.length){W.lastId=MY[0];$("sid").value=MY[0];$("idcard").hidden=true;W.portal(MY[0])}
+ unlock();W.go("home");pushUI()}
+async function login(raw,quiet){
+ const code=String(raw||"").toUpperCase().replace(/[^A-Z0-9]/g,"");
+ if(code.length<6){if(!quiet)say(T("This code is not valid. Check it, or ask the academy.","ഈ കോഡ് ശരിയല്ല. പരിശോധിക്കൂ, അല്ലെങ്കിൽ അക്കാദമിയോട് ചോദിക്കൂ."));return}
+ try{
+  const s=await getDoc(doc(db,"families",code));
+  if(!s.exists()){try{localStorage.removeItem("ta_code")}catch(e){}if(!quiet)say(T("This code is not valid. Check it, or ask the academy.","ഈ കോഡ് ശരിയല്ല. പരിശോധിക്കൂ, അല്ലെങ്കിൽ അക്കാദമിയോട് ചോദിക്കൂ."));return}
+  try{localStorage.setItem("ta_code",code)}catch(e){}
+  const k=s.data().kids||{};enter(k)
+ }catch(e){if(!quiet)say(String(e.code||e.message||e))}}
+/* ---------- push notifications ---------- */
+async function enablePush(){
+ const reg=await navigator.serviceWorker.register("./firebase-messaging-sw.js");
+ const opt={serviceWorkerRegistration:reg};if(VAPID_KEY&&!VAPID_KEY.startsWith("YOUR_"))opt.vapidKey=VAPID_KEY;const token=await getToken(getMessaging(app),opt);
+ if(!token)throw new Error("no-token");
+ const classes=Array.from(new Set(Object.keys(W.STUDENTS).map(function(i){return W.STUDENTS[i].cls})));
+ await setDoc(doc(db,"devices",token),{token:token,classes:classes,lang:W.ML()?"ml":"en",updated:Date.now()});
+ try{localStorage.setItem("ta_push","1")}catch(e){}}
+async function pushUI(){
+ const el=$("pushc");if(!ok||!el||!MY.length)return;
+ let sup=false;try{sup=await isSupported()&&"Notification" in W&&"serviceWorker" in navigator}catch(e){}
+ const ios=/iPhone|iPad|iPod/.test(navigator.userAgent),standalone=matchMedia("(display-mode: standalone)").matches||navigator.standalone;
+ const card=function(inner){el.innerHTML='<div class="card next"><div class="ic">'+W.svg("bell")+'</div><div class="grow">'+inner+'</div></div>';W.walk()};
+ if(!sup){if(ios&&!standalone)card('<div class="sub">On iPhone: tap Share, then Add to Home Screen, and open the app from there.</div>');return}
+ if(Notification.permission==="granted"){try{await enablePush()}catch(e){console.warn(e)}card('<b>Notifications are on</b>');return}
+ if(Notification.permission==="denied"){card('<div class="sub">Notifications are blocked. Allow them in your phone or browser settings.</div>');return}
+ card('<b>Get class reminders and notices on your phone</b><button class="btn sm" id="pushbtn" style="margin-top:10px">Turn on notifications</button>');
+ $("pushbtn").onclick=async function(){
+  if(await Notification.requestPermission()==="granted"){try{await enablePush()}catch(e){console.warn(e)}}
+  pushUI()}}
+if(ok){isSupported().then(function(s){if(s)onMessage(getMessaging(app),function(p){const d=p.data||{};toast((d.title||"")+(d.body?": "+d.body:""))})}).catch(function(){})}
+/* ---------- login / admin ---------- */
+function codesUI(){
+ const L=W.TAA.list();
+ $("codes").innerHTML=L.map(function(f){const n=f.phone.length===10?"91"+f.phone:f.phone;
+  const t="As-salamu alaykum 🌙\nThamheed Academy parent code for "+f.names.join(", ")+":\n\n"+f.code+"\n\n1. Open "+location.origin+location.pathname+"\n2. Enter this code once.\n\nതംഹീദ് അക്കാദമി: മുകളിലെ കോഡ് ഒരു തവണ നൽകിയാൽ മതി. ദയവായി കോഡ് രഹസ്യമായി സൂക്ഷിക്കുക.";
+  return '<div class="fee"><span><b>'+W.esc(f.names.join(", ")||"—")+'</b><div class="sub">'+W.esc(f.code)+(n?" · +"+W.esc(n):"")+'</div></span><a class="btn sm" target="_blank" rel="noopener" href="'+W.esc(W.wa(t,n))+'">Send code</a></div>'}).join("")||'<p class="sub">No codes yet. Add students and tap Publish.</p>'}
+async function isAdm(u){return(await getDoc(doc(db,"admins",u.uid))).exists()}
+if(ok){
+ loadCfg();
+ let c=null;try{c=localStorage.getItem("ta_code")}catch(e){}
+ if(c)login(c,true);
+ onAuthStateChanged(auth,async function(u){
+  if(!u)return;
+  try{
+   if(await isAdm(u)){
+    const S=await allKids();W.STUDENTS=S;MY=[];W.TAA.reload(S);codesUI();
+    const sel=$("pn_c");sel.innerHTML='<option value="all">All parents</option>'+W.CLASSES.map(function(x){return'<option>'+x.n+'</option>'}).join("");
+    document.querySelector(".bar").classList.add("isadm");$("idcard").hidden=false;unlock();W.go("admin")}
+   else{say(T("This account is not an admin.","ഈ അക്കൗണ്ടിന് അഡ്മിൻ അനുമതി ഇല്ല."));await signOut(auth)}
+  }catch(e){say(String(e.code||e.message||e))}})
+}else{say("Firebase is not set up yet. Add your Firebase details in config.js (see README).")}
+$("gin").onclick=function(){if(!ok)return;say("");login($("gph").value)};
+$("gph").addEventListener("keydown",function(e){if(e.key==="Enter")$("gin").click()});
+$("gsl").onclick=function(e){e.preventDefault();$("gstaff").hidden=!$("gstaff").hidden};
+$("gsi").onclick=async function(){
+ if(!ok)return;say("");
+ try{await signInWithEmailAndPassword(auth,$("gem").value.trim(),$("gpw").value)}
+ catch(e){say(T("Wrong email or password.","ഇമെയിൽ അല്ലെങ്കിൽ പാസ്‌വേഡ് തെറ്റാണ്."))}};
+document.querySelector("#home .wrap.up").insertAdjacentHTML("beforeend",'<button class="btn sm ghost full" id="lo" style="margin-top:6px">Log out</button>');
+$("lo").onclick=function(){try{localStorage.removeItem("ta_code")}catch(e){}(ok&&auth.currentUser?signOut(auth):Promise.resolve()).then(function(){location.reload()})};
+$("bak").onclick=function(){
+ const b=new Blob([JSON.stringify(W.TAA.collect(),null,1)],{type:"application/json"}),a=document.createElement("a");
+ a.href=URL.createObjectURL(b);a.download="thamheed-data.json";a.click()};
+$("pub").onclick=async function(){
+ const st=function(m,bad){const e=$("pst");e.textContent=m;e.style.color=bad?"var(--bad)":"var(--ok)"};
+ if(!ok){st("Firebase is not set up.",1);return}
+ st("Publishing…");
+ try{
+  const d=W.TAA.collect();
+  await setDoc(doc(db,"config","app"),d.cfg);
+  const old=await getDocs(collection(db,"families")),keep=Object.keys(d.families);
+  await Promise.all(keep.map(function(c){return setDoc(doc(db,"families",c),d.families[c])}).concat(old.docs.filter(function(x){return keep.indexOf(x.id)<0}).map(function(x){return deleteDoc(x.ref)})));
+  codesUI();st("Published. Parents see the update right away. Now send each parent their code from “Parent login codes”.")}
+ catch(e){st("Could not save: "+(e.code||e.message),1)}};
+$("pn_s").onclick=async function(){
+ const m=$("pn_m"),t=$("pn_t").value.trim(),b=$("pn_b").value.trim();
+ if(!t||!b){m.textContent="Write a title and a message.";m.style.color="var(--bad)";return}
+ try{await addDoc(collection(db,"notices"),{cls:$("pn_c").value,title:t,body:b,at:Date.now()});m.textContent="Sent.";m.style.color="var(--ok)";$("pn_t").value="";$("pn_b").value=""}
+ catch(e){m.textContent="Could not send: "+(e.code||e.message);m.style.color="var(--bad)"}};
+</script>
+
 </body>
 </html>
